@@ -1,23 +1,27 @@
 {
   "name": "blog",
   "version": "1.0.0",
-  "description": "vuepress blog",
+  "main": "index.js",
   "directories": {
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
-    "generate": "chmod 777 deploy.sh && ./deploy.sh"
-  },
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vuepress": "^1.0.0-alpha.32"
+    "dev": "vuepress dev docs"
   },
   "dependencies": {
-    "vuepress-theme-yubisaki": "^3.1.0"
-  }
+    "@yuicer/vuepress-theme-yuicer": "0.0.3",
+    "vuepress": "^1.0.0-alpha.47"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuicer/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yuicer/blog/issues"
+  },
+  "homepage": "https://github.com/yuicer/blog#readme",
+  "description": ""
 }
