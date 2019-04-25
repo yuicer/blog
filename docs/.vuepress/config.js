@@ -12,21 +12,18 @@ module.exports = {
       }
     ]
   ],
-  // theme: 'yubisaki',
+  // theme: 'reco',
   theme: '@yuicer/yuicer',
-  themeConfig: {
-    sidebar: false,
-    lastUpdated: '跟新于',
-    nav: [
-      {
-        text: 'Github',
-        link: 'https://github.com/yuicer'
-      }
-    ]
-  },
   markdown: {
     lineNumbers: true
   },
   evergreen: true,
   base: '/'
+  // configureWebpack: {
+  //   resolve: {
+  //     alias: {
+  //       '@alias': 'path/to/some/dir'
+  //     }
+  //   }
+  // }
 }
