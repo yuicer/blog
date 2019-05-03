@@ -15,7 +15,7 @@ install: npm install
 script: npm run build
 
 deploy:
-  local-dir: './public'
+  local-dir: './dist'
   provider: pages
   skip_cleanup: true
   github_token: ${ACCESS_TOKEN} # Set in the settings page of your repository, as a secure variable
