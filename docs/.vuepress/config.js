@@ -1,5 +1,3 @@
-const path = require('path')
-
 module.exports = {
   title: 'yuicer',
   description: 'colorful wanted',
@@ -12,18 +10,24 @@ module.exports = {
       }
     ]
   ],
-  // theme: 'reco',
   theme: '@yuicer/yuicer',
   markdown: {
     lineNumbers: true
   },
   evergreen: true,
-  base: '/'
-  // configureWebpack: {
-  //   resolve: {
-  //     alias: {
-  //       '@alias': 'path/to/some/dir'
-  //     }
-  //   }
-  // }
+  base: '/',
+  themeConfig: {
+    bgImg: 'https://img.yuicer.com/bg/beach.jpg',
+    repo: 'yuicer/blog',
+    nav: [
+      {
+        text: 'Links',
+        items: [
+          { text: 'Twitter', link: 'https://twitter.com/yuicer1' },
+          { text: 'Blibili', link: 'https://space.bilibili.com/3069623' }
+        ]
+      }
+    ]
+    // ga: ''
+  }
 }
