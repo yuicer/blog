@@ -9,19 +9,15 @@ branches:
 cache:
   bundler: true
   yarn: true
-  directories: node_modules
 
 install: npm install
 
 script: npm run build
 
 deploy:
-  local-dir: './dist'
   provider: pages
-  skip-cleanup: true
-  github-token: ${ACCESS_TOKEN} # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  committer-from-gh: true
-  target-branch: gh-pages
+  skip_cleanup: true
+  github_token: ${ACCESS_TOKEN} # Set in the settings page of your repository, as a secure variable
+  keep_history: true
   on:
     branch: master
