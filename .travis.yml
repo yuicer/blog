@@ -15,9 +15,11 @@ install: npm install
 script: npm run build
 
 deploy:
+  local-dir: './public'
   provider: pages
   skip_cleanup: true
   github_token: ${ACCESS_TOKEN} # Set in the settings page of your repository, as a secure variable
+  committer-from-gh: true
   keep_history: true
   on:
     branch: master
