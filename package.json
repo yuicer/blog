@@ -6,10 +6,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs --dest ./dist"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "0.0.3",
+    "@yuicer/vuepress-theme-yuicer": "0.0.51",
+    "moment": "^2.24.0",
     "vuepress": "^1.0.0-alpha.47"
   },
   "repository": {
@@ -23,5 +25,5 @@
     "url": "https://github.com/yuicer/blog/issues"
   },
   "homepage": "https://github.com/yuicer/blog#readme",
-  "description": ""
+  "description": "blog"
 }
