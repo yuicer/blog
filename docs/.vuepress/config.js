@@ -18,7 +18,7 @@ module.exports = {
   base: '/',
   themeConfig: {
     bgImg: 'https://img.yuicer.com/bg/winter.jpg',
-    repo: 'yuicer/blog',
+    repo: 'yuicer/vuepress-theme-yuicer',
     nav: [
       {
         text: 'Links',
