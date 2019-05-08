@@ -17,7 +17,7 @@ module.exports = {
   evergreen: true,
   base: '/',
   themeConfig: {
-    bgImg: 'https://img.yuicer.com/bg/beach.jpg',
+    bgImg: 'https://img.yuicer.com/bg/winter.jpg',
     repo: 'yuicer/blog',
     nav: [
       {
@@ -27,7 +27,7 @@ module.exports = {
           { text: 'Blibili', link: 'https://space.bilibili.com/3069623' }
         ]
       }
-    ]
-    // ga: ''
+    ],
+    ga: 'UA-139861258-1'
   }
 }
