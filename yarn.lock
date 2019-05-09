@@ -1113,15 +1113,25 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yuicer/vuepress-theme-yuicer@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-1.0.2.tgz#c453e0d140dab128d6c8726fb43814410f0d5f76"
-  integrity sha512-mnvAQFGZXs69hsndOiU7Q48Xv7qevuhE8OaZmsmdsSQiyliUKMhv8R9Qciy5T+A4x5YmZN8WFdywaY8zOzwAQw==
+"@yuicer/vuepress-plugin-sorted-pages@^1.0.33":
+  version "1.0.33"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-plugin-sorted-pages/-/vuepress-plugin-sorted-pages-1.0.33.tgz#6659e95c084eaff2a3e5a4ee2e9a376b8758c3d9"
+  integrity sha512-a9K4uOazDa8hnetKVoJXGKPNFnMVFHvSpCw8gp3UHiu0fDrU6qTHgKIA6Kep1uVkQ+Rw31iJ0kXYnwsBoyjeug==
+  dependencies:
+    "@vuepress/plugin-last-updated" "^1.0.0-alpha.47"
+    "@vuepress/shared-utils" "^1.0.0-alpha.47"
+    moment "^2.24.0"
+
+"@yuicer/vuepress-theme-yuicer@^1.0.33":
+  version "1.0.33"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-1.0.33.tgz#55255cf457775d95b6427ef989ccfa1925f6fda0"
+  integrity sha512-lXl/bsEalbW5F45mPVoF48SokBsCplfVoxHxkQ8qrBZAs7FtCfiMDfDjT0JZnf8ZU9QecxLBkU6LPbHEs6SABw==
   dependencies:
     "@vuepress/plugin-back-to-top" "^1.0.0-alpha.47"
     "@vuepress/plugin-blog" "^1.0.0-alpha.47"
     "@vuepress/plugin-google-analytics" "^1.0.0-alpha.47"
     "@vuepress/plugin-medium-zoom" "^1.0.0-alpha.47"
+    "@yuicer/vuepress-plugin-sorted-pages" "^1.0.33"
     moment "^2.24.0"
 
 abbrev@1:

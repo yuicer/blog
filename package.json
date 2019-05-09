@@ -7,10 +7,12 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs --dest ./dist"
+    "build": "vuepress build docs --dest ./dist",
+    "new": "vuepress new --dir docs",
+    "info1": "vuepress info ./"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "^1.0.2",
+    "@yuicer/vuepress-theme-yuicer": "^1.0.33",
     "moment": "^2.24.0",
     "vuepress": "^1.0.0-alpha.47"
   },
