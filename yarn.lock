@@ -1113,25 +1113,25 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yuicer/vuepress-plugin-sorted-pages@^1.0.33":
-  version "1.0.33"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-plugin-sorted-pages/-/vuepress-plugin-sorted-pages-1.0.33.tgz#6659e95c084eaff2a3e5a4ee2e9a376b8758c3d9"
-  integrity sha512-a9K4uOazDa8hnetKVoJXGKPNFnMVFHvSpCw8gp3UHiu0fDrU6qTHgKIA6Kep1uVkQ+Rw31iJ0kXYnwsBoyjeug==
+"@yuicer/vuepress-plugin-sorted-pages@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-plugin-sorted-pages/-/vuepress-plugin-sorted-pages-1.0.8.tgz#075c137ed741248b0a92f600659f1b9c73f4f2aa"
+  integrity sha512-G0L9VX61C3chWw9iFgjKd2N0DWL/6ncgBafoZr6337KJT1wNK3UuvBXHZR3p2KAKNNYTj7bDmG31TBTRNUUx8g==
   dependencies:
     "@vuepress/plugin-last-updated" "^1.0.0-alpha.47"
     "@vuepress/shared-utils" "^1.0.0-alpha.47"
     moment "^2.24.0"
 
-"@yuicer/vuepress-theme-yuicer@^1.0.33":
-  version "1.0.33"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-1.0.33.tgz#55255cf457775d95b6427ef989ccfa1925f6fda0"
-  integrity sha512-lXl/bsEalbW5F45mPVoF48SokBsCplfVoxHxkQ8qrBZAs7FtCfiMDfDjT0JZnf8ZU9QecxLBkU6LPbHEs6SABw==
+"@yuicer/vuepress-theme-yuicer@^1.0.8":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-1.0.8.tgz#86d117f80223636ad1d8a83ab42171b61b669782"
+  integrity sha512-zmpjC3nXsdaObmx1IhJRIOwpbyoivV8+THAtqUthLqAWdgPWt/Y+dX1Xpj8tzmcIH6nfXdhpQIS9YRPpf13ilQ==
   dependencies:
     "@vuepress/plugin-back-to-top" "^1.0.0-alpha.47"
     "@vuepress/plugin-blog" "^1.0.0-alpha.47"
     "@vuepress/plugin-google-analytics" "^1.0.0-alpha.47"
     "@vuepress/plugin-medium-zoom" "^1.0.0-alpha.47"
-    "@yuicer/vuepress-plugin-sorted-pages" "^1.0.33"
+    "@yuicer/vuepress-plugin-sorted-pages" "^1.0.8"
     moment "^2.24.0"
 
 abbrev@1:
