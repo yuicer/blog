@@ -12,7 +12,7 @@
     "info1": "vuepress info ./"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "^1.0.8",
+    "@yuicer/vuepress-theme-yuicer": "^1.0.9",
     "moment": "^2.24.0",
     "vuepress": "^1.0.0-alpha.47"
   },
