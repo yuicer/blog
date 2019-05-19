@@ -18,7 +18,6 @@ module.exports = {
   base: '/',
   themeConfig: {
     bgImg: 'https://img.yuicer.com/bg/winter.jpg',
-    // bgColor: '#f3edeb',
     repo: 'yuicer/vuepress-theme-yuicer',
     nav: [
       {
