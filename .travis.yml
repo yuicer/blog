@@ -10,9 +10,9 @@ cache:
   bundler: true
   yarn: true
 
-install: npm install
+install: yarn
 
-script: npm run build
+script: yarn build
 
 deploy:
   local-dir: './dist'
