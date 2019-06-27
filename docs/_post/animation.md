@@ -5,9 +5,6 @@ category: 砖头
 img: /img/css-animation.png
 ---
 
-<p></p>
-<!-- more -->
-
 ## 1. gif 动画
 
 这个对前端很省事情。但是它有一个严重缺陷是 gif 图会有白边，而且没有透明度
@@ -20,7 +17,7 @@ img: /img/css-animation.png
 
 <img src="https://s3.music.126.net/nact/s/client/images/year2017/p05/man_repeat.png?d8aa052%E2%80%A6" width="100%">
 
-<iframe src="https://yuicer.com/demo/demo_180102/index_man.html" frameborder="no" marginwidth="0" marginheight="0" width="100" height="150""></iframe>
+<iframe src="/demo/demo_180102/index_man.html" frameborder="no" marginwidth="0" marginheight="0" width="100" height="150""></iframe>
 
 ps： 一些小视频也可以通过这种方式制作
 
@@ -28,7 +25,7 @@ ps： 一些小视频也可以通过这种方式制作
 
 1. 路径动画【樱花】
 
-  <iframe src="https://yuicer.com/demo/demo_180102/index_sakura.html" frameborder="no" marginwidth="0" marginheight="0" height="300" scrolling="no"></iframe>
+  <iframe src="/demo/demo_180102/index_sakura.html" frameborder="no" marginwidth="0" marginheight="0" height="300" scrolling="no"></iframe>
 
 这个动画其实是 3 张樱花图片在做变换，下面是其中一张图片的变换代码
 
@@ -50,7 +47,7 @@ animateMotion 中的 path 属性可以定义 svg 节点沿着某一路线进行�
 <path d="M674.09-33.84C342.94 353.33 88.03 549.27-90.66 553.98" id="a"></path>
 ```
 
-2. 线段动画
+1. 线段动画
 
 <svg id="ani" width="100px" height="100px" viewBox="0 0 100 100">
   <g stroke-width="4" stroke="#C7C7CB" fill="none">
