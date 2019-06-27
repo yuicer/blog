@@ -1,7 +1,7 @@
 ---
 title: animation
 date: 2019-05-04 19:18:40
-category: 砖头
+tag: 砖头
 img: /img/css-animation.png
 ---
 
