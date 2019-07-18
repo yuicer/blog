@@ -10,7 +10,7 @@
     "build": "vuepress build docs --dest ./dist"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "1.2.5",
+    "@yuicer/vuepress-theme-yuicer": "1.2.6",
     "vuepress": "1.0.1"
   },
   "repository": {
