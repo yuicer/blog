@@ -1,5 +1,5 @@
 ---
-title: dailyTip
+title: daily tip
 date: 2019-07-11 14:28:40
 tag: 砖头
 ---

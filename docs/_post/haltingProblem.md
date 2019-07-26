@@ -1,5 +1,5 @@
 ---
-title: haltingProblem
+title: halting problem
 date: 2019-07-25 19:18:40
 tag: 油彩
 ---
