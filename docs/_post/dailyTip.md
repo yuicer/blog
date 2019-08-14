@@ -4,6 +4,9 @@ date: 2019-07-11 14:28:40
 tag: 砖头
 ---
 
+### $mount
+provide an entrance for a function or feature
+
 ### publish your scope npm without --access public
 
 pkg config
