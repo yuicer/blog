@@ -27,3 +27,7 @@ pkg config
 ### delete all local branches excpet master
 
 `git branch | grep -v "master" | xargs git branch -D`
+
+### url format
+
+`<scheme>://<user>:<password>@<host>:<port>/<url-path>`
