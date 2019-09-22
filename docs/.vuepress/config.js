@@ -6,7 +6,7 @@ module.exports = {
       'link',
       {
         rel: 'icon',
-        href: 'https://yuicer.com/images/me.config/me.png'
+        href: 'https://img.yuicer.com/me.config/me.png'
       }
     ]
   ],

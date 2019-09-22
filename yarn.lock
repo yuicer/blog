@@ -882,24 +882,24 @@
   dependencies:
     lodash.throttle "^4.1.1"
 
-"@vuepress/plugin-back-to-top@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.0.3.tgz#f10eb97a85781b044803ae96aceb5006cc6075b0"
-  integrity sha512-GTJKGnxep+2pMi22Uj4dm7kqxbifkRyGU7SrzWa7I26UpbuQ6M87EN6uCoH7CNTapv0O+kwrht7wci4BuPo5wg==
+"@vuepress/plugin-back-to-top@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-back-to-top/-/plugin-back-to-top-1.1.0.tgz#c765f1be1b2bd04956c2ca627d3737ecde6ac337"
+  integrity sha512-UodMcqqSYERwoQkJQIwqEGxtyQGZMNo0YDfPGXXsIVJqesfeqgTSqfzuZZv/oCAahvG+EHtV4ZzKguls+cm1tA==
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-blog@1.2.4":
-  version "1.2.4"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.2.4.tgz#3ff97eebb3044991cd0d0f780c02355f64fac4a2"
-  integrity sha512-I6OhDm66QDsRH7er3uYQGTglTQWvdZukqpvMHiMSAqqL6fcPGGxnsQTzhxUZMg1L3PTK2nmaGQL88tiIxYZhmQ==
+"@vuepress/plugin-blog@1.2.5":
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.2.5.tgz#08a5cf3dbe1c048082682922fda1bd3fd2fa3477"
+  integrity sha512-l6c6uF2lELZEjSROcm6hU6TRXpZgsXGj7klmZ1ousjaVWwMBFnEw/6Ak0U0lKlRyphii/oa3GjM5J6YWzzrivQ==
   dependencies:
     vuejs-paginate "^2.1.0"
 
-"@vuepress/plugin-google-analytics@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.0.3.tgz#2c36584d473d6d21b0880719afc83bd5b40e778b"
-  integrity sha512-mqFFQSJjQp5zscZJ0Ik+YDLV7sZSAO8w13CG8c5WsUCjy+0oWhqAw/NjpVrEK8Y/PdYPe4l/OE5jMUU5AqRRjg==
+"@vuepress/plugin-google-analytics@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.1.0.tgz#282309cf6071b42f57ce996f2b07e3a9eaefc727"
+  integrity sha512-dihyMDXWyPPGxvZge6Xz904ZAjhNcP2dzVbMa2rBvh9oPd6VD5M6mMw6NyNzHfm+LTFY0bTqOzuTFC1j7RnZnw==
 
 "@vuepress/plugin-last-updated@^1.0.3":
   version "1.0.3"
@@ -908,10 +908,10 @@
   dependencies:
     cross-spawn "^6.0.5"
 
-"@vuepress/plugin-medium-zoom@1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.0.3.tgz#d87975b5ba9ee4effa1c8fb223781726dfc683f2"
-  integrity sha512-IRf77BjyYVQe5Bi4apkeO/BJnrndO6qMFarT2MsjqBWVAG+LPq99qOEEkak4gJlFPQo3coM9O6DNR1JZXxLjbg==
+"@vuepress/plugin-medium-zoom@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-medium-zoom/-/plugin-medium-zoom-1.1.0.tgz#c95560197fff23500b049278584b85f4f3a0ed3d"
+  integrity sha512-DGLRL2YJX6ptmeAOeQSMWh9dgby9B4MXWkiqyXTS+9YNPWEdqvjnXGFvr7VLkXUaZdapnt3OkZDdnq28jUR3fg==
   dependencies:
     medium-zoom "^1.0.4"
 
@@ -1125,16 +1125,17 @@
   dependencies:
     "@vuepress/shared-utils" "1.0.3"
 
-"@yuicer/vuepress-theme-yuicer@2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.0.3.tgz#10a50d9f616a06b8d9632b24b95f8641d96ff1a5"
-  integrity sha512-DFdKE56qa+wpswahkTJj45OJXakH+a8vWOvagaKGW7739j2GWvIUR5wU0cpdyvwWrKMD0kcc6OBW18R2gWLMig==
+"@yuicer/vuepress-theme-yuicer@2.0.4":
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.0.4.tgz#d8029243dd0988fed17b6d4a0b4effae4a8489b5"
+  integrity sha512-DCsdvY7wTzoY3XMDgFWgzUCjG3YwP2WwCmDbrYwIrlsye/j09edNNglafwWH1dkwvbZRCy7Sb39IwfAIQv85ZQ==
   dependencies:
-    "@vuepress/plugin-back-to-top" "1.0.3"
-    "@vuepress/plugin-blog" "1.2.4"
-    "@vuepress/plugin-google-analytics" "1.0.3"
-    "@vuepress/plugin-medium-zoom" "1.0.3"
+    "@vuepress/plugin-back-to-top" "1.1.0"
+    "@vuepress/plugin-blog" "1.2.5"
+    "@vuepress/plugin-google-analytics" "1.1.0"
+    "@vuepress/plugin-medium-zoom" "1.1.0"
     "@yuicer/vuepress-plugin-sorted-pages" "^2.0.0"
+    lodash "^4.17.15"
     moment "2.24.0"
 
 abbrev@1:
@@ -4275,7 +4276,7 @@ lodash.uniq@^4.5.0:
   resolved "https://registry.yarnpkg.com/lodash.uniq/-/lodash.uniq-4.5.0.tgz#d0225373aeb652adc1bc82e4945339a842754773"
   integrity sha1-0CJTc662Uq3BvILklFM5qEJ1R3M=
 
-lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.3, lodash@^4.17.5:
+lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.3, lodash@^4.17.5:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
