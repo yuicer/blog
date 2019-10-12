@@ -4,6 +4,13 @@ date: 2019-07-11 14:28:40
 tag: 砖头
 ---
 
+### lerna related
+1. 当使用 yarn 的 workspaces 时，yarn 命令会直接提取所有 packages 下面的依赖安装到跟目录中，并帮忙做好 link 功能。这个时候 `lenra bootstrap` 不会生效，但是 lerna link 依旧会起作用
+2. 当使用 `lerna publish` 失败之后，可以使用 `lerna publish from-package` 来再次发布。
+
+### git diff
+write diff which excludes docs folder to certain file `git diff v1.0.0  -- . ':!docs' > diff_with_1.1.0_version.diff`
+
 ### git filter-branch
 
 [github:removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
