@@ -4,6 +4,9 @@ date: 2019-07-11 14:28:40
 tag: 砖头
 ---
 
+### reverse-i-search
+press `ctrl + r`, and you can easily find what you have typied before
+
 ### git filter-branch
 
 [github:removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
