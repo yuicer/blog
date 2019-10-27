@@ -1125,10 +1125,10 @@
   dependencies:
     "@vuepress/shared-utils" "1.0.3"
 
-"@yuicer/vuepress-theme-yuicer@2.0.4":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.0.4.tgz#d8029243dd0988fed17b6d4a0b4effae4a8489b5"
-  integrity sha512-DCsdvY7wTzoY3XMDgFWgzUCjG3YwP2WwCmDbrYwIrlsye/j09edNNglafwWH1dkwvbZRCy7Sb39IwfAIQv85ZQ==
+"@yuicer/vuepress-theme-yuicer@2.0.5":
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.0.5.tgz#120e71a36a4be731411e5516859589942ae67bc4"
+  integrity sha512-wppCYTvN4c13j+c1hLy2ulKqUKQR7DglBxBg7/OwP2Z2OlRaBVVe4vza9bMsAoshXnSLFSSqRFDYK+HvIqmRCw==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.1.0"
     "@vuepress/plugin-blog" "1.2.5"
