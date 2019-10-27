@@ -4,7 +4,17 @@ date: 2019-07-11 14:28:40
 tag: 砖头
 ---
 
+### lerna related
+
+1. 当使用 yarn 的 workspaces 时，yarn 命令会直接提取所有 packages 下面的依赖安装到跟目录中，并帮忙做好 link 功能。这个时候 `lenra bootstrap` 不会生效，但是 lerna link 依旧会起作用
+2. 当使用 `lerna publish` 失败之后，可以使用 `lerna publish from-package` 来再次发布。
+
+### git diff
+
+write diff which excludes docs folder to certain file `git diff v1.0.0 -- . ':!docs' > diff_with_1.1.0_version.diff`
+
 ### reverse-i-search
+
 press `ctrl + r`, and you can easily find what you have typied before
 
 ### git filter-branch
@@ -12,8 +22,8 @@ press `ctrl + r`, and you can easily find what you have typied before
 [github:removing-sensitive-data-from-a-repository](https://help.github.com/en/articles/removing-sensitive-data-from-a-repository)
 [git:重寫歷史](https://git-scm.com/book/zh/v1/Git-%E5%B7%A5%E5%85%B7-%E9%87%8D%E5%86%99%E5%8E%86%E5%8F%B2)
 
+### \$mount meaning
 
-### $mount meaning
 provide an entrance for a function or feature
 
 ### publish your scope npm without --access public
@@ -25,7 +35,6 @@ pkg config
   "access": "public"
 },
 ```
-
 
 ### delete all local branches excpet master
 
