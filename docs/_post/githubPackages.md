@@ -10,28 +10,28 @@ img: 'https://ci4.googleusercontent.com/proxy/2iVfJzLufYkF8GSrcgXRD6Vn-qfA_GQFyB
 
 Today we will see the new features of the github **[GitHub Package Registry](https://github.com/features/package-registry?utm_source=announcement&utm_medium=email&utm_campaign=ww-gpr-beta) !**
 
-**[videos from 7:00](https://www.youtube.com/watch?v=N_-Cu9_2YAA)**
+[videos from 7:00](https://www.youtube.com/watch?v=N_-Cu9_2YAA)
 
-since I receive the mail of the gihub that they offered me beta access to GitHub Package Registry. I decide to have a look what's new here.
+since I receive the email of the gihub and they offered me beta access to GitHub Package Registry. I decide to have a look what's new here.
 
-[configuration](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry)
+[this is offical configuration](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry)
 
 ### Authenticating to GitHub Package Registry
 
 before we start this part, we need to know what's the **[github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)**
 
-well, we often ues ssh-key for a authenticating of github or gitlab, [ if you do not know what's the ssh, please check [here](https://help.github.com/en/articles/connecting-to-github-with-ssh) ], but sometimes, we can not use ssh connect, so if we only have https connect, we will need to provide account & password or the **token**
+well, we often ues ssh-key for a authenticating of github or gitlab, 【 if you do not know what's the ssh, please check [here](https://help.github.com/en/articles/connecting-to-github-with-ssh) 】, but sometimes, we can not use ssh connect, so if we only have https connect, we will need to provide account & password or the **token**
 
 we can enter the setting page of the github, and click the [Developer settings](https://github.com/settings/tokens),we will see **Personal access tokens** on the left sidebar.
 then we need to click the **Generate new token** button to **[get a token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)**
 
-> You must use a personal access token with the read:packages and write:packages scopes to publish and delete public packages in the GitHub Package Registry with npm. Your personal access token must also have the repo scope when the repository is private.
+> You must use a personal access token with the **read:packages** and **write:packages** scopes to publish and delete public packages in the GitHub Package Registry with npm. Your personal access token must also have the repo scope when the repository is private.
 
 we can do like this, and click generate token.
 
 > Treat your tokens like passwords and keep them secret. When working with the API, use tokens as environment variables instead of hardcoding them into your programs.
 
-now we have the token, so we can use it to authenticate.
+now we get the token, so we can use it to authenticate.
 
 ### login to github npm
 
