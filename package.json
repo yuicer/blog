@@ -6,12 +6,12 @@
     "doc": "docs"
   },
   "scripts": {
-    "dev": "vuepress dev docs",
+    "start": "vuepress dev docs",
     "build": "vuepress build docs --dest ./dist"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "2.0.5",
-    "vuepress": "1.0.3"
+    "@yuicer/vuepress-theme-yuicer": "2.0.7",
+    "vuepress": "1.2.0"
   },
   "repository": {
     "type": "git",
