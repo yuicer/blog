@@ -2,7 +2,13 @@
 title: daily tip
 date: 2019-07-11 14:28:40
 tag: 砖头
+img: /img/richang.png
 ---
+
+### do not want error output
+`sh ./any_scripts.sh 2> /dev/null || true`
+2> /dev/null 不输出错误信息， || true 强制不报错
+
 
 ### JSON.stringify(value[, replacer [, space]])
 `JSON.stringify(data, undefined, 4)`  可以进行格式美化
