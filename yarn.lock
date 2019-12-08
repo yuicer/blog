@@ -916,10 +916,10 @@
   dependencies:
     lodash.debounce "^4.0.8"
 
-"@vuepress/plugin-blog@1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.5.1.tgz#c78420fc1c050dc3e75467f01e521651f77d4a1c"
-  integrity sha512-5T4hC0peWhaRC6Ei/yagm01bMX5GvpIE07mLFsuhztGMh6lz4pR7J6hh9W6qAuhAQsi77br1dePKgoeHWaqmyA==
+"@vuepress/plugin-blog@1.5.2":
+  version "1.5.2"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-blog/-/plugin-blog-1.5.2.tgz#d03d94a296ed31e1b686f42bca7be96bc20fcfb5"
+  integrity sha512-MVnUk1MjZgKHUSQXbiuJfNMhbKMUhB3SlXNE+B5/pWhownagK+ttihws8uP+sliTsjvE/1UBWEtyZL7EiWIAIg==
   dependencies:
     "@vssue/api-github-v3" "^1.1.2"
     "@vssue/vuepress-plugin-vssue" "^1.2.0"
@@ -1151,26 +1151,26 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yuicer/vuepress-plugin-sorted-pages@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-plugin-sorted-pages/-/vuepress-plugin-sorted-pages-2.1.0.tgz#9ee779837b1b00a32ad5d3bddac9cd05ea242a0f"
-  integrity sha512-0L4b6ivZutUxEUGG5C0eZfgQNqaPxyXEzv+z7N39ZTYnNpCA3hGrZt4ImmScTGJj0skaVNyy8cK/F9eBsglS7w==
+"@yuicer/vuepress-plugin-sorted-pages@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-plugin-sorted-pages/-/vuepress-plugin-sorted-pages-2.1.1.tgz#09ca6d71da2d2bc621ec17d4659e9b5de97ff9de"
+  integrity sha512-y75QnngupBEmqXcrxpXl/MZy2yh4J8BtZWlGtoLWqgKefuqjMtOwzpQlqWFq2+ABaf620RXVqEKdgE9iLq+iVQ==
   dependencies:
     "@vuepress/shared-utils" "1.2.0"
 
-"@yuicer/vuepress-theme-yuicer@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.1.0.tgz#dae90c304ba9e789bb95600616d043ea64efc0b5"
-  integrity sha512-yWmGb1F6THVY6ixrHq+bOYAU+45mCKNHxO7knGAxzBdNRIvpLCxYPHYuRrCriYS49SE7Xkj/PQs+Fc0uaCJL8Q==
+"@yuicer/vuepress-theme-yuicer@2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.1.1.tgz#2a686f5038098aa82e2e204ac6290296108e640f"
+  integrity sha512-zDAR3/Yu5jo91Eg8iwtLwTO6XPjAgF/wzBE0pOmIOSz9+XNqEM4p/QXqVxfKsivwh1/2328BgEwpH1iBTINiAw==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.2.0"
-    "@vuepress/plugin-blog" "1.5.1"
+    "@vuepress/plugin-blog" "1.5.2"
     "@vuepress/plugin-google-analytics" "1.2.0"
     "@vuepress/plugin-medium-zoom" "1.2.0"
-    "@yuicer/vuepress-plugin-sorted-pages" "^2.1.0"
+    "@yuicer/vuepress-plugin-sorted-pages" "^2.1.1"
     lodash "^4.17.15"
     moment "2.24.0"
-    vuepress-plugin-smooth-scroll "0.0.7"
+    vuepress-plugin-smooth-scroll "0.0.9"
 
 abbrev@1:
   version "1.1.1"
@@ -7265,10 +7265,10 @@ vuepress-plugin-sitemap@^2.3.0:
   dependencies:
     sitemap "^3.0.0"
 
-vuepress-plugin-smooth-scroll@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.7.tgz#ee0dc4b76eb487b115ae95049a5d749b581b8439"
-  integrity sha512-VbLl4AFoLypylCGN0PHO7X+wSjWPKGccaE91DjooXVCsXs6DadzDZCpXSIlQ1WJf/uu9Pi40l3e33FNtt7xu2Q==
+vuepress-plugin-smooth-scroll@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-smooth-scroll/-/vuepress-plugin-smooth-scroll-0.0.9.tgz#6c5d01db60def3d7b976b53404e56b97da9e8f39"
+  integrity sha512-UXX+HLZO1NKVwyiOJlj0smh8F9dKnwybjEi7w/Mj9EYLhKrNYr5uXs+N+OTt8VwKCn3f0vZ1XAwFIjsPlD7GJA==
   dependencies:
     smoothscroll-polyfill "^0.4.4"
 

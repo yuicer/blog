@@ -17,7 +17,7 @@ module.exports = {
   evergreen: true,
   base: '/',
   themeConfig: {
-    bgImg: 'https://img.yuicer.com/bg/fishman3.jpg',
+    bgImg: 'https://img.yuicer.com/bg/sora2.jpg',
     repo: 'yuicer/vuepress-theme-yuicer',
     nav: [
       {
