@@ -5,6 +5,13 @@ tag: 砖头
 img: /img/richang.png
 ---
 
+### vscode report error for optional chain
+this is because of the typescript version inside of the vscode(due to 2019.12.4) is not arrived **typescipt@3.7**, we can install vscode plugin **JavaScript and TypeScript Nightly** to replace inside version with typescript@next version
+
+### vscode edite everywhere
+`ctrl+shift+L`
+选中一个字符串，匹配所有字符串，同时出现编辑光标
+
 ### do not want error output
 `sh ./any_scripts.sh 2> /dev/null || true`
 2> /dev/null 不输出错误信息， || true 强制不报错
