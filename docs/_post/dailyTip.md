@@ -1,5 +1,5 @@
 ---
-title: daily tip
+title: daily tip 01
 date: 2019-07-11 14:28:40
 tag: 砖头
 img: /img/richang.png
