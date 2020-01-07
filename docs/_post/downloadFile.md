@@ -1,9 +1,7 @@
 ---
 title: downloadFile
-date: 2019-12-16 07:52:25
+date: 2019/12/16 07:52:25
 ---
-
-<!-- more -->
 
 [comes from](https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file)
 
@@ -27,7 +25,7 @@ date: 2019-12-16 07:52:25
 
 If the file is generated using a POST request you may think you would need to use ajax to complete the request and then download the result that you have buffered up in the memory while creating your Blob.
 
-That is a waste of time and memory. You can accomplish it with a regular <form> submission and then respond with a content-disposition attachment header. Ajax/JS isn't the solution to everything. It would be better to create a hidden form + fields and submit it using javascript then using ajax.
+That is a waste of time and memory. You can accomplish it with a regular `<form>` submission and then respond with a content-disposition attachment header. Ajax/JS isn't the solution to everything. It would be better to create a hidden form + fields and submit it using javascript then using ajax.
 
 ## Using attribute download
 

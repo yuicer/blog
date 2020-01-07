@@ -16,6 +16,14 @@ module.exports = {
   },
   evergreen: true,
   base: '/',
+  plugins: [
+    [
+      'vuepress-plugin-mathjax',
+      {
+        target: 'svg'
+      }
+    ]
+  ],
   themeConfig: {
     bgImg: 'https://img.yuicer.com/bg/sora2.jpg',
     repo: 'yuicer/vuepress-theme-yuicer',
