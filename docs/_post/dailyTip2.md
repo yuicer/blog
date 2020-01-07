@@ -1,6 +1,6 @@
 ---
 title: daily tip 02
-date: 2019-12-09 16:28:40
+date: 2019/12/09 16:28:40
 tag: 砖头
 img: /img/richang02.png
 ---
@@ -25,6 +25,7 @@ const xxx = require('xxx')
 
 > attach file
 
+<form>
 <table>
 <thead>
 <tr>
@@ -59,3 +60,4 @@ const xxx = require('xxx')
 </tr>
 </tbody>
 </table>
+</form>

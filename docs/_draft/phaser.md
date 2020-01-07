@@ -1,8 +1,7 @@
 ---
 title: phaser 笔记
 tag: 尺工
-date: 2019-05-20 16:02:27
-notArticle: true
+date: 2019/05/20 16:02:27
 ---
 
 记录一下看 phaser 3 的一些笔记

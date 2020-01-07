@@ -1,6 +1,6 @@
 ---
 title: functional programming
-date: 2019-07-26 19:18:40
+date: 2019/07/26 19:18:40
 tag: 油彩
 ---
 
