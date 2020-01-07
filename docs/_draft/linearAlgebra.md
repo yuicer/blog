@@ -1,12 +1,8 @@
 ---
-title: linear algebra
+title: Linear algebra
 date: 2020/01/03 17:31:53
 mid: 431259256
 ---
-
-<!-- more -->
-
-<!-- <audio height=30px controls src="https://music.163.com/song/media/outer/url?id=431259256.mp3"></audio> -->
 
 > 在涉及到稍微深一点的图形计算时发现自己数学的东西全忘了。。。补充一点基本知识
 
