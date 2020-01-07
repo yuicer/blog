@@ -10,8 +10,7 @@
     "build": "vuepress build docs --dest ./dist"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "2.2.1",
-    "aplayer": "^1.10.1",
+    "@yuicer/vuepress-theme-yuicer": "2.2.4",
     "vuepress": "1.2.0",
     "vuepress-plugin-mathjax": "^1.2.8"
   },

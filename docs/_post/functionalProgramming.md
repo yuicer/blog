@@ -1,5 +1,5 @@
 ---
-title: functional programming
+title: Functional programming
 date: 2019/07/26 19:18:40
 tag: 油彩
 ---
@@ -7,9 +7,11 @@ tag: 油彩
 之前陆陆续续有接触过不少函数式编程的概念，平时工作中也有用到。写个自己的感受总结贴
 
 ## 函数编程 vs 面向对象编程
->everything is lambda vs enerything is object
+
+> everything is lambda vs enerything is object
 
 oop 基本操作
+
 ```js
 // need msg center
 const shooter = new Object()
@@ -19,8 +21,12 @@ enemy.die()
 ```
 
 fp 基本操作
+
 ```js
-data.filter().map().reduce()
+data
+  .filter()
+  .map()
+  .reduce()
 add(a)(b)
 ```
 
@@ -29,9 +35,11 @@ add(a)(b)
 个人感觉：对象编程更适合于游戏。函数编程更适合于业务
 
 ## 函数式编程
+
 本质是给定输入，输出相同的结果。
 
 所以就有两个本质
+
 - stateless 无内部状态
 - immutable 不改变原数据
 
@@ -39,7 +47,7 @@ add(a)(b)
 
 ```
 // 一个大对象解析参数
-fn({a,b,c,d}) 
+fn({a,b,c,d})
 
 // 内部转化
 fn(config,callback){
@@ -82,16 +90,17 @@ const curryingAdd = currying(add)
 var result = curryingAdd(1)(2)(3, 4)
 ```
 
-ps: 写这玩意的时候突然想到一个问题，没法校验用户输入。以上面的例子为例 
-`curryingAdd(1)``curryingAdd(1)(2)(3)(4)``curryingAdd(1,2,3)(4)` 都会得不到正确的值，而且给不出任何提示。。。嘛，毕竟 fn 是用户传过来的，所以这个地方还是需要用户自己得注意吧。。。
+ps: 写这玩意的时候突然想到一个问题，没法校验用户输入。以上面的例子为例
+` curryingAdd(1)``curryingAdd(1)(2)(3)(4)``curryingAdd(1,2,3)(4) ` 都会得不到正确的值，而且给不出任何提示。。。嘛，毕竟 fn 是用户传过来的，所以这个地方还是需要用户自己得注意吧。。。
 
 ## 惰性求值
 
-> [wiki](https://zh.wikipedia.org/wiki/%E6%83%B0%E6%80%A7%E6%B1%82%E5%80%BC) 延迟求值特别用于函数式编程语言中。在使用延迟求值的时候，表达式不在它被绑定到变量之后就立即求值，而是在该值被取用的时候求值，也就是说，语句如x:=expression; (把一个表达式的结果赋值给一个变量)明显的调用这个表达式被计算并把结果放置到x中，但是先不管实际在x中的是什么，直到通过后面的表达式中到x的引用而有了对它的值的需求的时候，而后面表达式自身的求值也可以被延迟，最终为了生成让外界看到的某个符号而计算这个快速增长的依赖树。
+> [wiki](https://zh.wikipedia.org/wiki/%E6%83%B0%E6%80%A7%E6%B1%82%E5%80%BC) 延迟求值特别用于函数式编程语言中。在使用延迟求值的时候，表达式不在它被绑定到变量之后就立即求值，而是在该值被取用的时候求值，也就是说，语句如 x:=expression; (把一个表达式的结果赋值给一个变量)明显的调用这个表达式被计算并把结果放置到 x 中，但是先不管实际在 x 中的是什么，直到通过后面的表达式中到 x 的引用而有了对它的值的需求的时候，而后面表达式自身的求值也可以被延迟，最终为了生成让外界看到的某个符号而计算这个快速增长的依赖树。
 
 不过。。感觉现在的语言基本都是惰性求值了。不然根本没法完成递归运算
 
 ## 链式计算 pipeline
+
 前面一个的返回值是后面一个的输入
 
 `data.filter.map.reduce` ，通过每次返回 this，来实现这种优雅的链式调用，不需要 for 循环，语义化就变得很容易。代码更容易读

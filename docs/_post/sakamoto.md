@@ -1,5 +1,5 @@
 ---
-title: sakamoto
+title: Sakamoto
 date: 2019/06/27 19:18:40
 tag: 油彩
 ---

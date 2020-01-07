@@ -1,28 +1,31 @@
 ---
-title: daily tip 01
+title: Daily tip 01
 date: 2019/07/11 14:28:40
 tag: 砖头
 img: /img/richang.png
 ---
 
 ### vscode report error for optional chain
+
 this is because of the typescript version inside of the vscode(due to 2019.12.4) is not arrived **typescipt@3.7**, we can install vscode plugin **JavaScript and TypeScript Nightly** to replace inside version with typescript@next version
 
 ### vscode edite everywhere
+
 `ctrl+shift+L`
 选中一个字符串，匹配所有字符串，同时出现编辑光标
 
 ### do not want error output
+
 `sh ./any_scripts.sh 2> /dev/null || true`
 2> /dev/null 不输出错误信息， || true 强制不报错
 
-
 ### JSON.stringify(value[, replacer [, space]])
-`JSON.stringify(data, undefined, 4)`  可以进行格式美化
 
-replacer > 如果该参数是一个函数，则在序列化过程中，被序列化的值的每个属性都会经过该函数的转换和处理；如果该参数是一个数组，则只有包含在这个数组中的属性名才会被序列化到最终的 JSON 字符串中；如果该参数为null或者未提供，则对象所有的属性都会被序列化；关于该参数更详细的解释和示例，请参考使用原生的 JSON 对象一文。
+`JSON.stringify(data, undefined, 4)` 可以进行格式美化
 
-space > 指定缩进用的空白字符串，用于美化输出（pretty-print）；如果参数是个数字，它代表有多少的空格；上限为10。该值若小于1，则意味着没有空格；如果该参数为字符串(字符串的前十个字母)，该字符串将被作为空格；如果该参数没有提供（或者为null）将没有空格。
+replacer > 如果该参数是一个函数，则在序列化过程中，被序列化的值的每个属性都会经过该函数的转换和处理；如果该参数是一个数组，则只有包含在这个数组中的属性名才会被序列化到最终的 JSON 字符串中；如果该参数为 null 或者未提供，则对象所有的属性都会被序列化；关于该参数更详细的解释和示例，请参考使用原生的 JSON 对象一文。
+
+space > 指定缩进用的空白字符串，用于美化输出（pretty-print）；如果参数是个数字，它代表有多少的空格；上限为 10。该值若小于 1，则意味着没有空格；如果该参数为字符串(字符串的前十个字母)，该字符串将被作为空格；如果该参数没有提供（或者为 null）将没有空格。
 
 ### lerna related
 
