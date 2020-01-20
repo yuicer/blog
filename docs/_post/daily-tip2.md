@@ -5,25 +5,20 @@ tag: 砖头
 img: /img/richang02.png
 ---
 
-### webpack compile ts project to node & browser
+## webpack compile ts project to version using in node or browser
 
 1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) wtf?
 
-2. to avoid annoying `default`
+2. to avoid annoying `default` below
+you need to add `libraryExport: 'default'` to solve that
 
 ```js
 import xxx from 'xxx'
 const xxx = require('xxx').default
-```
 
-you need to add `libraryExport: 'default'` to support
-
-```js
 import xxx from 'xxx'
 const xxx = require('xxx')
 ```
-
-> attach file
 
 <form>
 <table>
