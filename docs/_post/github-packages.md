@@ -6,7 +6,7 @@ img: 'https://ci4.googleusercontent.com/proxy/2iVfJzLufYkF8GSrcgXRD6Vn-qfA_GQFyB
 
 <!-- more -->
 
-### intro
+## intro
 
 Today we will see the new features of the github **[GitHub Package Registry](https://github.com/features/package-registry?utm_source=announcement&utm_medium=email&utm_campaign=ww-gpr-beta) !**
 
@@ -16,7 +16,7 @@ since I receive the email of the gihub and they offered me beta access to GitHub
 
 [this is offical configuration](https://help.github.com/en/articles/configuring-npm-for-use-with-github-package-registry)
 
-### Authenticating to GitHub Package Registry
+## Authenticating to GitHub Package Registry
 
 before we start this part, we need to know what's the **[github access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line)**
 
@@ -33,7 +33,7 @@ we can do like this, and click generate token.
 
 now we get the token, so we can use it to authenticate.
 
-### login to github npm
+## login to github npm
 
 ```
 $ npm login --registry=https://npm.pkg.github.com --scope=@YOURNAME
@@ -46,7 +46,7 @@ USERNAME will be your github name, TOKEN will be the token we had generated just
 
 if success, you will see `Logged in as USERNAME on https://npm.pkg.github.com/.`
 
-### Publish your package
+## Publish your package
 
 1. you will create a repo on github, name it `hello`, and then git clone your repo to local
 
@@ -65,7 +65,7 @@ if success, you will see `Logged in as USERNAME on https://npm.pkg.github.com/.`
 }
 ```
 
-### install a github packge
+## install a github packge
 
 1. Also need .npmrc to specify which npm origin will be used `echo registry=https://npm.pkg.github.com/USERNAME > .npmrc`
 
