@@ -1,8 +1,7 @@
 ---
-title: CountingImg.md
+title: Counting Shape
 date: 2019/12/01 08:30:45
 img: /img/count-img.png
-imgStyle: { 'background-size': 'contain' }
 ---
 
 ### 前言
