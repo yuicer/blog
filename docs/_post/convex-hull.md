@@ -1,7 +1,6 @@
 ---
 title: Convex Hull
 date: 2019/12/24 10:48:10
-# img: /img/context-hull.png
 ---
 
 ## [凸包问题](https://zh.wikipedia.org/wiki/%E5%87%B8%E5%8C%85)

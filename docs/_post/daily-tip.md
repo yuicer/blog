@@ -2,7 +2,7 @@
 title: Daily tip 01
 date: 2019/07/11 14:28:40
 tag: 砖头
-img: /img/richang.png
+img: /img/20190711.png
 ---
 
 ## vscode report error for optional chain

@@ -2,7 +2,7 @@
 title: Daily tip 02
 date: 2019/12/09 16:28:40
 tag: 砖头
-img: /img/richang02.png
+img: /img/20191209.png
 ---
 
 ## webpack compile ts project to version using in node or browser
@@ -10,7 +10,7 @@ img: /img/richang02.png
 1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) wtf?
 
 2. to avoid annoying `default` below
-you need to add `libraryExport: 'default'` to solve that
+   you need to add `libraryExport: 'default'` to solve that
 
 ```js
 import xxx from 'xxx'
