@@ -25,7 +25,7 @@ module.exports = {
     ]
   ],
   themeConfig: {
-    bgImg: 'https://img.yuicer.com/bg/sora2.jpg',
+    bgImg: 'https://img.yuicer.com/bg/sora1.jpg',
     repo: 'yuicer/vuepress-theme-yuicer',
     nav: [
       {

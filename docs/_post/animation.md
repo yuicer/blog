@@ -17,7 +17,7 @@ img: /img/css-animation.png
 
 <img src="https://s3.music.126.net/nact/s/client/images/year2017/p05/man_repeat.png?d8aa052%E2%80%A6" width="100%">
 
-<iframe src="/demo/demo_180102/index_man.html" frameborder="no" marginwidth="0" marginheight="0" width="100" height="150""></iframe>
+<iframe src="/demo/demo_180102/index_man.html" frameborder="no" marginwidth="0" marginheight="0" width="100" height="150"></iframe>
 
 ps： 一些小视频也可以通过这种方式制作
 
