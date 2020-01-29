@@ -1,7 +1,7 @@
 ---
 title: Counting Shape
 date: 2019/12/01 08:30:45
-img: /img/count-img.png
+img: /img/20191201.png
 ---
 
 ### 前言
@@ -21,7 +21,7 @@ img: /img/count-img.png
 <script>
   const ctx = document.createElement('canvas').getContext('2d')
   const img = new Image()
-  img.src = '/img/count-img.png'
+  img.src = '/img/20191201.png'
 
   img.onload = function() {
     ctx.drawImage(img, 0, 0, 40, 40)

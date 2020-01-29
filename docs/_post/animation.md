@@ -2,7 +2,7 @@
 title: Animation
 date: 2019/05/06 19:18:40
 tag: 砖头
-img: /img/css-animation.png
+img: /img/20190506-1.png
 ---
 
 ## 1. gif 动画
@@ -105,7 +105,7 @@ animateMotion 中的 path 属性可以定义 svg 节点沿着某一路线进行�
 
 4. matrix(a,b,c,d,e,f)【css，svg 中的 transform】
 
-<img src="/img/matrix.png" />
+<img src="/img/20190506-2.png" />
 
 这个是万能的矩阵变换。。。。所有的其他 transform 属性都是通过它来实现
 
