@@ -14,16 +14,9 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
+
   evergreen: true,
   base: '/',
-  plugins: [
-    [
-      'vuepress-plugin-mathjax',
-      {
-        target: 'svg'
-      }
-    ]
-  ],
   themeConfig: {
     bgImg: 'https://img.yuicer.com/bg/winter.jpg',
     repo: 'yuicer/vuepress-theme-yuicer',
