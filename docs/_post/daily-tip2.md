@@ -5,6 +5,15 @@ tag: 砖头
 img: /img/20191209.png
 ---
 
+## git reset --soft
+
+this comand `git reset --soft HEAD~1` can widthdraw the commit operation
+
+## d.ts.map
+
+if npm package provides the d.ts.map file. then you will jump to (.ts) file rather then (.d.ts) file when click the export constant.
+and this need you can not ignore ts files in .npmigonre.
+
 ## webpack compile ts project to version using in node or browser
 
 1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) wtf?
