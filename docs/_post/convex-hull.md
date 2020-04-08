@@ -41,19 +41,19 @@ date: 2019/12/24 10:48:10
 
 这里可以继续对穷举法进行优化，首先取纵坐标最小的一个点，如果有两个就取其中一个，它肯定在凸包上。
 
-然后以它为极坐标中心，对剩下的所有点进行一个角度排序，O(n)，排序如下图。
+然后以它为极坐标中心，对剩下的所有点进行一个角度排序，排序结果如下图。
 
 <img src="/img/20200128-3.png" width="500">
 
 然后就按顺序依次对每一个点 $P_k$ 开始依次尝试剩下的 $P_{n-k}$ 个点，找到第一个满足条件的点【其他点都在$P_kP_{n-k}$线段左侧】。
 
-这样可以降低时间复杂度到 `O(1) + O(n*log n) + O(n^2)`
+这样可以降低复杂度到 `O(n^2)`
 
 到了这一步，想继续优化就得换一个思路，考虑是否可以不再对每一个点都进行尝试。[Graham](https://zh.wikipedia.org/zh-cn/%E8%91%9B%E7%AB%8B%E6%81%86%E6%8E%83%E6%8F%8F%E6%B3%95)
 
 这里通过从最低点开始，然后分析凸包的特点找规律，距离它角度最小的第一个点肯定是凸包上的点【当然角度最大的也是】，那么把 p0p1 入栈，接着考虑在线段 p1p2 是否是左转【可以想象一个人先沿着 p0p1 走，到了 p1 的时候是需要向左转还是向右转】。如果是向左，那么这个点入栈，继续下一个点。如果这个点向右，那么说明当前栈顶不是凸包上的点，出栈。然后再次拿栈顶两点来和当前拿的点比较。这样如此反复
 
-这里由于最后一步搜索的过程其实是 O(n)，所以总的复杂度为搜索排序的复杂度 `O(n * log n)`
+复杂度 `O(n * log n)`
 
 最后附上 Graham 的实现
 
@@ -62,11 +62,11 @@ date: 2019/12/24 10:48:10
 function crossProduct(p0, p1, p2) {
   const vectorA = {
     x: p1.x - p0.x,
-    y: p1.y - p0.y
+    y: p1.y - p0.y,
   }
   const vectorB = {
     x: p2.x - p0.x,
-    y: p2.y - p0.y
+    y: p2.y - p0.y,
   }
   // 向量叉乘，这里简化了 z 轴
   return vectorA.x * vectorB.y - vectorA.y * vectorB.x
@@ -82,15 +82,15 @@ function getConvexHull(pointData) {
 
   // 按角度排序
   const sortedPoint = arr
-    .map(p => {
+    .map((p) => {
       const cos = (p.x - p0.x) / Math.sqrt(Math.pow(p.y - p0.y, 2) + Math.pow(p.x - p0.x, 2))
       return {
         ...p,
-        cos
+        cos,
       }
     })
     .sort((a, b) => b.cos - a.cos)
-    .map(p => {
+    .map((p) => {
       return { x: p.x, y: p.y }
     })
 
@@ -119,7 +119,7 @@ const pointData = [
   { x: 5, y: 11 },
   { x: 6, y: 21 },
   { x: 7, y: 43 },
-  { x: 10, y: 115 }
+  { x: 10, y: 115 },
 ]
 const areaData = getConvexHull(JSON.parse(JSON.stringify(pointData)))
 
