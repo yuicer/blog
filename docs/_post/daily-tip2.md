@@ -5,6 +5,20 @@ tag: 砖头
 img: /img/20191209.png
 ---
 
+## [youtube-dl](https://github.com/ytdl-org/youtube-dl)
+toutube-dl is a command line tool to download videos
+
+```shell
+brew install youtube-dl
+# helpful when download 1080P, it will merge audio and vidwo automatically
+brew install ffmpeg
+# get download list
+youtube-dl -F https://www.youtube.com/watch\?v\=8PYKGIeDZLQ
+# download 1080P
+youtube-dl -f 137+140  https://www.youtube.com/watch\?v\=8PYKGIeDZLQ
+```
+
+
 ## git reset --soft
 
 this comand `git reset --soft HEAD~1` can widthdraw the commit operation
