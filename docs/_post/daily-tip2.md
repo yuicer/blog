@@ -5,8 +5,28 @@ tag: 砖头
 img: /img/20191209.png
 ---
 
+## import file from outside of src
+cause of some shit reasons, I have to import files from anther project into this project. track some problems in this process
+
+1. create-react-app
+[create-react-app/issues/834](https://github.com/facebook/create-react-app/issues/834)
+[hack solutions](https://stackoverflow.com/questions/44114436/the-create-react-app-imports-restriction-outside-of-src-directory)
+
+delete ModuleScopePlugin will release this limit. but you also need to setup loaders yourself.
+
+examples
+```ts
+import { resolve } from 'path'
+chainWebpack(config) {
+   config.module.rule('your-loader').include.add(resolve('../your-path'));
+},
+```
+
+**through the right way is to use yarn/npm link and make monorepo. but making tsconfig.json is really annoying** 
+
+
 ## [youtube-dl](https://github.com/ytdl-org/youtube-dl)
-toutube-dl is a command line tool to download videos
+youtube-dl is a command line tool to download videos
 
 ```shell
 brew install youtube-dl
