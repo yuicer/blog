@@ -1,6 +1,6 @@
 ---
 title: Daily tip 02
-date: 2019/12/09 16:28:40
+date: 2020/4/27 16:28:40
 tag: 砖头
 img: /img/20191209.png
 ---
@@ -50,10 +50,10 @@ and this need you can not ignore ts files in .npmigonre.
 
 ## webpack compile ts project to version using in node or browser
 
-1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) wtf?
+1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) [wtf?
 
 2. to avoid annoying `default` below
-   you need to add `libraryExport: 'default'` to solve that
+   you need to add `libraryExport: 'default'` to solve this
 
 ```js
 import xxx from 'xxx'
