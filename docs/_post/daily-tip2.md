@@ -1,9 +1,44 @@
 ---
 title: Daily tip 02
-date: 2020/4/27 16:28:40
+date: 2020/5/8 11:28:40
 tag: 砖头
 img: /img/20191209.png
 ---
+
+## circle json structure stringfy
+`JSON.stringfy` will throw TypeError `VM126:1 Uncaught TypeError: Converting circular structure to JSON`
+
+[reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cyclic_object_value#Examples)
+
+simple resolvelation 
+```js
+var circularReference = {otherData: 123};
+circularReference.myself = circularReference;
+
+const getCircularReplacer = () => {
+  const seen = new WeakSet();
+  return (key, value) => {
+    if (typeof value === "object" && value !== null) {
+      if (seen.has(value)) {
+        return `[circle]`;
+      }
+      seen.add(value);
+    }
+    return value;
+  };
+};
+
+JSON.stringify(circularReference, getCircularReplacer());
+// "{"otherData":123,"myself":"[circle]"}"
+```
+
+[WeakSet](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakSet)
+
+
+
+## monaco-editor format 
+`editor.getAction('editor.action.formatDocument').run()`
+
 
 ## import file from outside of src
 cause of some shit reasons, I have to import files from anther project into this project. track some problems in this process
