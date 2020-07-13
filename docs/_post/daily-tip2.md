@@ -5,6 +5,24 @@ tag: 砖头
 img: /img/20191209.png
 ---
 
+## fix node-pre-gyp install --fallback-to-build 
+[issues here](https://github.com/mapbox/node-pre-gyp/issues/477)
+
+solution: **change the node version**
+
+
+## exchange node version with homebrew
+`brew search node`
+```zsh
+==> Formulae
+libbitcoin-node     node-build          node@12             nodeenv
+llnode              node-sass           node_exporter       nodenv
+node ✔              node@10
+```
+`brew unlink node`
+`brew install node@12`
+`brew link node@12` || `brew link node@12 --force --overwrite`
+
 ## fix macos bluetooth mouse not smooth
 1. open system preferences
 2. choose network
