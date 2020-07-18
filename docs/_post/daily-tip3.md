@@ -9,3 +9,12 @@
 `alias [custom-alias]="[command]"`
 example
 `alias devbox="ssh xxx@xx.xx.xx.xx"`
+
+## dyld brew
+```
+dyld: Library not loaded: /usr/local/opt/icu4c/lib/libicui18n.64.dylib
+  Referenced from: /usr/local/bin/node
+  Reason: image not found
+```
+
+this problem is causing by error link node version. you can use `brew upgrade node` or `brew upgrade` to upgrade all packages.
