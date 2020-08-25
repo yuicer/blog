@@ -5,6 +5,64 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## git delete origin tag
+
+```s
+git push origin --delete <tagname>
+```
+
+## lerna: skip partial packages using leran publish
+
+lerna did support `lerna run xxx --scope pkg1`. but `scope` do not work when using `publish`
+
+there has a lot of issues about this, but none of them mentioned how to solve it, cause the maintainer insist that
+
+> Because it breaks the fundamental mechanism Lerna uses to determine which packages need to be published? Absolutely nothing stopping you from not placing several packages in the same monorepo that apparently shouldn't be.  
+>  ------ @evocateur
+
+> As I noted above, this is impossible due to the manner in which lerna coordinates versions with git tags (and the diff since the last one is what indicates which packages should be published).
+> ------ @evocateur
+
+> If they are both independent, and you don’t want to publish them at the same time, then don’t use lerna, it’s clearly not necessary for your use case.
+> ------ @evocateur
+
+util..... I fonud [this_commit](https://github.com/lerna/lerna/commit/a9b9f97457e4e4b0cac7f4ce562458d921a1f9be)
+
+I test the `lerna publish --no-private`, it did work for me on version 3.22.1
+
+but stil `lerna publish --help` did not show this config :)
+
+## yarn workspace nohoist
+
+[doc_here](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/)
+
+workspaces looks good. but sometimes it's not so that smart. it juset can't completely figure out the package should place in the root node_modules or the child project node_modules
+
+so like the artificial intelligence, it need some help.
+
+```ts
+// root package.json
+ "workspaces":{
+    "packages": ["./A","./B"],
+    "nohoist": ["**/@types/node"]
+  },
+```
+
+## unhandledRejection
+
+In frontend project, sometimes, somehow, there will be somewhy error like `unhandledRejection`
+
+but this error do not show where it is :(
+
+so with the code below, you can catch them easily!
+
+```ts
+process.on('unhandledRejection', (reason, p) => {
+  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+  // application specific logging, throwing an error, or other logic here
+});
+```
+
 ## disable .ds_store auto generated in mac
 
 [.DS_Store](https://zh.wikipedia.org/zh-hans/.DS_Store)
