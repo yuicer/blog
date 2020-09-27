@@ -41,11 +41,15 @@ workspaces looks good. but sometimes it's not so that smart. it juset can't comp
 so like the artificial intelligence, it need some help.
 
 ```ts
-// root package.json
- "workspaces":{
-    "packages": ["./A","./B"],
-    "nohoist": ["**/@types/node"]
-  },
+// root project package.json
+"workspaces":{
+  "packages": ["./A","./B"],
+  "nohoist": ["**/react-native"]
+},
+// child project package.json
+"workspaces": {
+  "nohoist": ["react-native", "react-native/**"]
+}
 ```
 
 ## unhandledRejection
