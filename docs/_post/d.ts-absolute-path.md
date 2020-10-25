@@ -1,6 +1,8 @@
 ---
 title: ts absolute path
 date: 2020/03/14 11:01:40
+tag: 油彩
+img: /img/ts-logo.png
 ---
 
 ### 前言
