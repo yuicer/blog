@@ -1,6 +1,7 @@
 ---
 title: DownloadFile
 date: 2019/12/16 07:52:25
+tag: 砖头
 ---
 
 [comes from](https://github.com/eligrey/FileSaver.js/wiki/Saving-a-remote-file)
