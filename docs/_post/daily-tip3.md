@@ -5,6 +5,13 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## reset first git commit
+
+`git update-ref -d HEAD`
+[update-ref](https://git-scm.com/docs/git-update-ref)
+ 
+you need to delete current branch and push force again
+
 ## git delete origin tag
 
 ```s
