@@ -5,6 +5,21 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## npm deprecate
+[deprecate](https://docs.npmjs.com/cli/v7/commands/npm-deprecate)
+
+to info users warning
+
+## lerna skip changed  check
+`--force-publish`
+
+## mobile browser event quene
+touchstart touchend mousemove mousedoen mouseup click
+
+## git delete latest tag
+
+`git tag -d $(git log --date-order --tags --simplify-by-decoration --pretty=format:'%d' | head -1 | tr -d '()' | sed 's/,* tag://g')`
+
 ## reset first git commit
 
 `git update-ref -d HEAD`
@@ -33,7 +48,7 @@ there has a lot of issues about this, but none of them mentioned how to solve it
 > If they are both independent, and you don’t want to publish them at the same time, then don’t use lerna, it’s clearly not necessary for your use case.
 > ------ @evocateur
 
-util..... I fonud [this_commit](https://github.com/lerna/lerna/commit/a9b9f97457e4e4b0cac7f4ce562458d921a1f9be)
+until..... I fonud [this_commit](https://github.com/lerna/lerna/commit/a9b9f97457e4e4b0cac7f4ce562458d921a1f9be)
 
 I test the `lerna publish --no-private`, it did work for me on version 3.22.1
 
