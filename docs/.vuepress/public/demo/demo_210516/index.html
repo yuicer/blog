@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d');
+
+      var elephant = [];
+      var π = Math.PI;
+      var τ = 2 * Math.PI;
+      var P = 256;
+      var theta = 0;
+      var width = 200;
+      var height = 200;
+      var scale = 1;
+
+      FourierCoeffcient = function(real, image) {
+        this.real = real;
+        this.image = image;
+      };
+
+      //  p1 = 50 - 30j
+      //  p2 = 18 +  8j
+      //  p3 = 12 - 10j
+      //  p4 = -14 - 60j
+      //  p5 = 40 + 20j
+
+      // x(t): [  0. +0.j , -60.-30.j , 0. +8.j , -0.-10.j , 0. +0.j  ,   0. +0.j]
+      // y(t): [  0. +0.j ,   0.+50.j  , 0.+18.j , 12. +0.j , 0. +0.j  , -14. +0.j]
+      var P0 = new FourierCoeffcient(0, 0);
+      var P1 = new FourierCoeffcient(50, -30);
+      var P2 = new FourierCoeffcient(18, 8);
+      var P3 = new FourierCoeffcient(12, -10);
+      var P4 = new FourierCoeffcient(-14, -60);
+      var P5 = new FourierCoeffcient(40, 20);
+
+      Point = function(x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = 3;
+      };
+
+      function makeElephant() {
+        var x, y;
+
+        for (var i = 0; i < P; i++) {
+          x =
+            // sin
+            0 * Math.sin(0 * τ * (i / P)) +
+            P1.image * Math.sin(1 * τ * (i / P)) +
+            P2.image * Math.sin(2 * τ * (i / P)) +
+            P3.image * Math.sin(3 * τ * (i / P)) +
+            0 * Math.sin(4 * τ * (i / P)) +
+            0 * Math.sin(5 * τ * (i / P)) +
+            // cos
+            0 * Math.cos(0 * τ * (i / P)) +
+            P4.image * Math.cos(1 * τ * (i / P)) +
+            0 * Math.cos(2 * τ * (i / P)) +
+            0 * Math.cos(3 * τ * (i / P)) +
+            0 * Math.cos(4 * τ * (i / P)) +
+            0 * Math.cos(5 * τ * (i / P));
+
+          y =
+            // sin
+            0 * Math.sin(0 * τ * (i / P)) +
+            P1.real * Math.sin(1 * τ * (i / P)) +
+            P2.real * Math.sin(2 * τ * (i / P)) +
+            0 * Math.sin(3 * τ * (i / P)) +
+            0 * Math.sin(4 * τ * (i / P)) +
+            0 * Math.sin(5 * τ * (i / P)) +
+            // cos
+            0 * Math.cos(0 * τ * (i / P)) +
+            0 * Math.cos(1 * τ * (i / P)) +
+            0 * Math.cos(2 * τ * (i / P)) +
+            P3.real * Math.cos(3 * τ * (i / P)) +
+            0 * Math.cos(4 * τ * (i / P)) +
+            P4.real * Math.cos(5 * τ * (i / P));
+
+          elephant.push(new Point(x, y));
+        }
+
+        // eye
+        elephant.push(new Point(P5.image, -P5.image));
+      }
+
+      function draw() {
+        ctx.translate(width / 2, height / 2);
+        ctx.scale(scale, scale);
+        ctx.strokeStyle = 'steelblue';
+
+        let delta = (Math.cos(τ * theta) - 0.5) / 10;
+
+        elephant.forEach((p, index) => {
+          ctx.beginPath();
+          let _p = Object.assign({}, p);
+
+          // 这里根据 delta 做一个动画
+          if (_p.x > P5.real) {
+            _p.y += (_p.x - P5.real) * delta;
+          }
+
+          // body
+          ctx.arc(_p.x, _p.y, _p.radius, 0, τ);
+
+          // eye
+          if (index === elephant.length - 1) {
+            ctx.fillStyle = 'black';
+            ctx.fill();
+          }
+
+          ctx.stroke();
+        });
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+      }
+
+      makeElephant();
+
+      function loop() {
+        ctx.clearRect(0, 0, width, height);
+        theta += 0.1;
+        draw();
+        setTimeout(() => {
+          loop();
+        }, 200);
+      }
+
+      loop();
+    </script>
+  </body>
+</html>

@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@yuicer/vuepress-theme-yuicer": "2.3.8",
-    "vuepress": "1.8.2"
+    "vuepress": "1.5.3"
   },
   "repository": {
     "type": "git",
