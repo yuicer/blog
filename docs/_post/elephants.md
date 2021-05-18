@@ -72,9 +72,9 @@ var width = 600;
 var height = 600;
 var scale = 4;
 
-FourierCoeffcient = function (real, image) {
+FourierCoeffcient = function (real, imag) {
   this.real = real;
-  this.image = image;
+  this.imag = imag;
 };
 
 //  p1 = 50 - 30j
@@ -105,14 +105,14 @@ function makeElephant() {
     x =
       // sin
       0 * Math.sin(0 * τ * (i / P)) +
-      P1.image * Math.sin(1 * τ * (i / P)) +
-      P2.image * Math.sin(2 * τ * (i / P)) +
-      P3.image * Math.sin(3 * τ * (i / P)) +
+      P1.imag * Math.sin(1 * τ * (i / P)) +
+      P2.imag * Math.sin(2 * τ * (i / P)) +
+      P3.imag * Math.sin(3 * τ * (i / P)) +
       0 * Math.sin(4 * τ * (i / P)) +
       0 * Math.sin(5 * τ * (i / P)) +
       // cos
       0 * Math.cos(0 * τ * (i / P)) +
-      P4.image * Math.cos(1 * τ * (i / P)) +
+      P4.imag * Math.cos(1 * τ * (i / P)) +
       0 * Math.cos(2 * τ * (i / P)) +
       0 * Math.cos(3 * τ * (i / P)) +
       0 * Math.cos(4 * τ * (i / P)) +
@@ -138,7 +138,7 @@ function makeElephant() {
   }
 
   // eye
-  elephant.push(new Point(P5.image, -P5.image));
+  elephant.push(new Point(P5.imag, -P5.imag));
 }
 
 function draw() {
