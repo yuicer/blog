@@ -1399,9 +1399,9 @@
   integrity sha512-LV240pq9SNdDG2/svXEdw+acpbLSql44uNcVmul2sRmKNTr1QY/Fsda5azl4Xseinvdfy09S3MF8eAgTGgNRWA==
 
 "@yuicer/vuepress-theme-yuicer@2.3.10":
-  version "2.3.9"
-  resolved "https://registry.npmjs.org/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.9.tgz#52380a9b7858db77dfe625e9da1aadb31848196d"
-  integrity sha512-zB+kt9sDgUfXgLA9HLH+g4GDf7mPEIYmWikjUsvOSVbBCdo66ie8kRjOxOyCqEGTQ0WW5pnggQv/nhW0VZ9f/g==
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.10.tgz#e06b2c903a5170e9eb01f04a56bfb0afe0f861d3"
+  integrity sha512-MX2M8OSBjEUhL90v7Y3z1ge23V+PCAkclaIwZpC9b2wvCnGkPVbfvPwG4laBMFZsTaS8n9LJNiPRSAOJUoiDCw==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.8.2"
     "@vuepress/plugin-blog" "1.9.4"
@@ -2972,9 +2972,9 @@ dns-equal@^1.0.0:
   integrity sha1-s55/HabrCnW6nBcySzR1PEfgZU0=
 
 dns-packet@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.1.tgz#12aa426981075be500b910eedcd0b47dd7deda5a"
-  integrity sha512-0UxfQkMhYAUaZI+xrNZOz/as5KgDU0M/fQ9b6SpkyLbk3GEswDi6PADJVaYJradtRVsRIlF1zLyOodbcTCDzUg==
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-1.3.4.tgz#e3455065824a2507ba886c55a89963bb107dec6f"
+  integrity sha512-BQ6F4vycLXBvdrJZ6S3gZewt6rcrks9KBgM9vrhW+knGRqc8uEdT7fuCwloc7nny5xNoMJ17HGH0R/6fpo8ECA==
   dependencies:
     ip "^1.1.0"
     safe-buffer "^5.0.1"
