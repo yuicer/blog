@@ -1399,9 +1399,9 @@
   integrity sha512-LV240pq9SNdDG2/svXEdw+acpbLSql44uNcVmul2sRmKNTr1QY/Fsda5azl4Xseinvdfy09S3MF8eAgTGgNRWA==
 
 "@yuicer/vuepress-theme-yuicer@2.3.10":
-  version "2.3.9"
-  resolved "https://registry.npmjs.org/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.9.tgz#52380a9b7858db77dfe625e9da1aadb31848196d"
-  integrity sha512-zB+kt9sDgUfXgLA9HLH+g4GDf7mPEIYmWikjUsvOSVbBCdo66ie8kRjOxOyCqEGTQ0WW5pnggQv/nhW0VZ9f/g==
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.10.tgz#e06b2c903a5170e9eb01f04a56bfb0afe0f861d3"
+  integrity sha512-MX2M8OSBjEUhL90v7Y3z1ge23V+PCAkclaIwZpC9b2wvCnGkPVbfvPwG4laBMFZsTaS8n9LJNiPRSAOJUoiDCw==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.8.2"
     "@vuepress/plugin-blog" "1.9.4"
@@ -8161,9 +8161,9 @@ write-file-atomic@^3.0.0:
     typedarray-to-buffer "^3.1.5"
 
 ws@^6.2.1:
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.1.tgz#442fdf0a47ed64f59b6a5d8ff130f4748ed524fb"
-  integrity sha512-GIyAXC2cB7LjvpgMt9EKS2ldqr0MTrORaleiOno6TweZ6r3TKtoFQWay/2PceJ3RuBasOHzXNn5Lrw1X0bEjqA==
+  version "6.2.2"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-6.2.2.tgz#dd5cdbd57a9979916097652d78f1cc5faea0c32e"
+  integrity sha512-zmhltoSR8u1cnDsD43TX59mzoMZsLKqUweyYBAIvTngR3shc0W6aOZylZmq/7hqyVxPdi+5Ud2QInblgyE72fw==
   dependencies:
     async-limiter "~1.0.0"
 
