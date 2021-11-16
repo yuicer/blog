@@ -1,19 +1,31 @@
 ---
 title: Daily tip 03
-date: 2020/07/13 12:48:34
+date: 2021/11/16 12:48:34
+startDate: 2020/07/13 12:48:34
 tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## isPointInStroke isPointInPath
+
+"path" will use close path (if path not close, it will use ctx.closePath automatically)
+
+"stroke" will detect the real pixel stroke
+
+<iframe src="/demo/demo_211116/index.html" frameborder="no" marginwidth="0" marginheight="0" width="200" height="300"></iframe>
+
 ## npm deprecate
+
 [deprecate](https://docs.npmjs.com/cli/v7/commands/npm-deprecate)
 
 to info users warning
 
-## lerna skip changed  check
+## lerna skip changed check
+
 `--force-publish`
 
 ## mobile browser event quene
+
 touchstart touchend mousemove mousedoen mouseup click
 
 ## git delete latest tag
@@ -24,7 +36,7 @@ touchstart touchend mousemove mousedoen mouseup click
 
 `git update-ref -d HEAD`
 [update-ref](https://git-scm.com/docs/git-update-ref)
- 
+
 you need to delete current branch and push force again
 
 ## git delete origin tag

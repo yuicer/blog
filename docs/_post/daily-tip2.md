@@ -4,6 +4,9 @@ date: 2020/5/8 11:28:40
 tag: 砖头
 img: /img/20191209.png
 ---
+## font-variant font-feature-settings
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-feature-settings
 
 ## fix node-pre-gyp install --fallback-to-build 
 [issues here](https://github.com/mapbox/node-pre-gyp/issues/477)
@@ -131,7 +134,7 @@ and this need you can not ignore ts files in .npmigonre.
 1. excepting setting `output.libraryTarget: 'umd',`, you need also set `output.globalObject: this` [globalObject](https://webpack.js.org/configuration/output/#outputglobalobject) [wtf?
 
 2. to avoid annoying `default` below
-   you need to add `libraryExport: 'default'` to solve this
+   you need to add `output.libraryExport: 'default'` to solve this
 
 ```js
 import xxx from 'xxx'

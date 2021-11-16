@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background: #aaa">
+    <canvas width="150" height="150" id="canvas"></canvas>
+    <div>
+      <button id="red_path"></button>
+      <button id="red_stroke"></button>
+    </div>
+    <p></p>
+    <div>
+      <button id="yellow_path"></button>
+      <button id="yellow_stroke"></button>
+    </div>
+  </body>
+  <script>
+    const canvas = document.querySelector('#canvas');
+    const ctx = canvas.getContext('2d');
+    const btRedPath = document.querySelector('#red_path');
+    const btRedStroke = document.querySelector('#red_stroke');
+    const btYellowPath = document.querySelector('#yellow_path');
+    const btYellowStroke = document.querySelector('#yellow_stroke');
+
+    ctx.lineWidth = 30;
+    ctx.setLineDash([4, 16]);
+
+    ctx.moveTo(10, 10);
+    ctx.lineTo(110, 10);
+    ctx.lineTo(110, 110);
+    ctx.lineTo(10, 110);
+    // ctx.lineTo(10, 20);
+    ctx.closePath();
+
+    ctx.fillStyle = '#333';
+    ctx.fill();
+    ctx.strokeStyle = '#222';
+    ctx.stroke();
+
+    // symobl1
+    const posR = [20, 10];
+    ctx.fillStyle = 'red';
+    ctx.fillRect(...posR, 4, 4);
+
+    btRedStroke.innerHTML = `${'red stroke: ' + ctx.isPointInStroke(...posR)}`;
+    btRedPath.innerHTML = `${'red path: ' + ctx.isPointInPath(...posR)}`;
+
+    // symobl1
+    const posY = [50, 5];
+    ctx.fillStyle = '#ffa85c';
+    ctx.fillRect(...posY, 4, 4);
+
+    btYellowStroke.innerHTML = `${'yellow stroke: ' +
+      ctx.isPointInStroke(...posY)}`;
+    btYellowPath.innerHTML = `${'yellow path: ' + ctx.isPointInPath(...posY)}`;
+  </script>
+</html>
