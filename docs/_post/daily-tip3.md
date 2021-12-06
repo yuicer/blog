@@ -6,6 +6,23 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## CSP
+
+https://developers.google.com/web/fundamentals/security/csp?hl=zh-cn
+
+only load code from specific uri
+
+`script-src https://host1.com https://host2.com`
+
+or with default-src
+
+`Content-Security-Policy: default-src https://cdn.example.net; child-src 'none'; object-src 'none'`
+
+at first, you can use `Content-Security-Policy-Report-Only`
+
+`script-src 'unsafe-eval'` will enabel evel Function
+`script-src 'unsafe-inline'` will enabel inline script
+
 ## isPointInStroke isPointInPath
 
 "path" will use close path (if path not close, it will use ctx.closePath automatically)
