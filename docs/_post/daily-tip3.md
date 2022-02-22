@@ -6,6 +6,21 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## bisect
+`git bisect start` can start a quick find for git commit  
+`git bisect bad/old` tag current commit as a bad code
+`git bisect good/new commit-1` tag commit-1 commit as  a good code
+
+and from now, git will automatical checkout to middle commit，and you need to tag good or bad untill you find the bug
+
+`git bisect reset` will end this debug
+
+## 300ms tap delay
+
+`<meta name="viewport" content="width=device-width">`
+
+[detail](https://developers.google.com/web/updates/2013/12/300ms-tap-delay-gone-away)
+
 ## CSP
 
 https://developers.google.com/web/fundamentals/security/csp?hl=zh-cn
