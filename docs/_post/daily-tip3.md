@@ -6,6 +6,63 @@ tag: 砖头
 img: /img/20200703-1.png
 ---
 
+## extends
+```
+interface IOption {
+  id: number;
+}
+
+interface IA<T extends IOption> {
+  init:(option: T) => void;
+}
+
+interface IAOption extends IOption{
+  a: number;
+}
+
+class A implements IA<IOption> {
+  init(option: IOption){}
+}
+
+interface IB extends IA<IAOption> {
+  init:(option: IAOption) => void;
+}
+
+class B extends A implements IB {
+  init(option: IAOption){}
+}
+
+
+```
+
+## miniapp
+webview / javascriptcore, v8, webwokrer
+diff-patch svelte-analysis
+[andorid webview](https://developer.android.com/reference/android/webkit/WebView)
+[ios wkwebview](https://developer.apple.com/documentation/webkit/replacing_uiwebview_in_your_app)
+
+
+## peer dependencies
+
+npm versions 1, 2, and 7 will automatically install peerDependencies if they are not explicitly depended upon higher in the dependency tree. For npm versions 3 through 6, you will receive a warning that the peerDependency is not installed instead.
+
+## app link
+1. shema
+
+when app installed, the app will add one custome protocol into ios system. like weixin://. But this method will be forbidened by some app and is not smooth enough
+
+
+1. [Universal link](https://developer.apple.com/library/archive/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW1)
+   
+iOS users can tap a link to your website and get seamlessly redirected to your installed app without going through Safari. If your app isn’t installed, tapping a link to your website opens your website in Safari.
+   
+- Create an apple-app-site-association file that contains JSON data about the URLs that your app can handle.
+
+- Upload the apple-app-site-association file to your HTTPS web server. You can place the file at the root of your server or in the .well-known subdirectory.
+
+- Prepare your app to handle universal links.
+
+
 ## bisect
 `git bisect start` can start a quick find for git commit  
 `git bisect bad/old` tag current commit as a bad code
