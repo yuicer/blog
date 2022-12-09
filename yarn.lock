@@ -1399,9 +1399,9 @@
   integrity sha512-LV240pq9SNdDG2/svXEdw+acpbLSql44uNcVmul2sRmKNTr1QY/Fsda5azl4Xseinvdfy09S3MF8eAgTGgNRWA==
 
 "@yuicer/vuepress-theme-yuicer@2.3.10":
-  version "2.3.9"
-  resolved "https://registry.npmjs.org/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.9.tgz#52380a9b7858db77dfe625e9da1aadb31848196d"
-  integrity sha512-zB+kt9sDgUfXgLA9HLH+g4GDf7mPEIYmWikjUsvOSVbBCdo66ie8kRjOxOyCqEGTQ0WW5pnggQv/nhW0VZ9f/g==
+  version "2.3.10"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-2.3.10.tgz#e06b2c903a5170e9eb01f04a56bfb0afe0f861d3"
+  integrity sha512-MX2M8OSBjEUhL90v7Y3z1ge23V+PCAkclaIwZpC9b2wvCnGkPVbfvPwG4laBMFZsTaS8n9LJNiPRSAOJUoiDCw==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.8.2"
     "@vuepress/plugin-blog" "1.9.4"
@@ -6277,9 +6277,9 @@ qs@^6.6.0:
   integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
 
 qs@~6.5.2:
-  version "6.5.2"
-  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
-  integrity sha512-N5ZAX4/LxJmF+7wN74pUD6qAh9/wnvdQcjq9TZjevvXzSUo7bfmw91saqMjzGS2xq91/odN2dW/WOl7qQHNDGA==
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.3.tgz#3aeeffc91967ef6e35c0e488ef46fb296ab76aad"
+  integrity sha512-qxXIEh4pCGfHICj1mAJQ2/2XVZkjCDTcEgfoSQxc/fYivUZxTkk7L3bDBJSoNrEzXI17oUO5Dp07ktqE5KzczA==
 
 query-string@^5.0.1:
   version "5.1.1"
