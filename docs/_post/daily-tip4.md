@@ -5,6 +5,42 @@ tag: 砖头
 img: /img/20230109-1.jpg
 ---
 
+## fetch png/jpg
+so how to get the imageData in Node like browser
+
+node
+```
+import { PNG } from 'pngjs';
+const data = await fetch(imgUrl, {
+   method: 'get',
+   headers: {
+   'responseType': 'arraybuffer'
+   }
+});
+const arrayBuffer = await data.arrayBuffer();
+const imgData = PNG.sync.read(Buffer.from(arrayBuffer1));
+console.log('imgData:', imgData);
+```
+
+browser
+```
+const domImg = document.getElement('#img')
+const canvas = document.getElement('#canvas')
+const ctx = canvas.getContext('2d')
+ctx.drawImage(domImg,0,0,width?,height?)
+const imgData = ctx.getImageData(0,0,500,500)
+console.log('imgData:', imgData)
+ctx.clearRect(0,0,500,500)
+ctx.putImageData(imgData,40,40)
+```
+
+```
+data: Uint8ClampedArray(1000000) [216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, 216, 216, 218, 255, …]
+colorSpace: "srgb",
+height: 500,
+width: 500,
+```
+
 ## absorb page color
 1. html to canvas
    1. get all dom in view, and use dsl (basic dom-css to canvas api) to transfer to canvas, and toImageData to get color
