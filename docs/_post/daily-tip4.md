@@ -5,6 +5,43 @@ tag: 砖头
 img: /img/20230109-1.jpg
 ---
 
+
+## find port
+```
+netstat -anp | grep 3009
+kill -9 2347946
+```
+
+## github auth failed
+```
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s.
+Please contact your system administrator.
+Add correct host key in ~/.ssh/known_hosts to get rid of this message.
+Host key for github.com has changed and you have requested strict checking.
+Host key verification failed.
+```
+
+just run 
+```
+ssh-keygen -R github.com
+```
+
+## performance.now()
+
+Unlike Date.now, the timestamps returned by performance.now() are not limited to one-millisecond resolution. Instead, they represent times as floating-point numbers with up to microsecond precision.
+
+Also, Date.now() may have been impacted by system and user clock adjustments, clock skew, etc. as it is relative to the Unix epoch (1970-01-01T00:00:00Z) and dependent on the system clock. The performance.now() method on the other hand is relative to the timeOrigin property which is a monotonic clock: its current time never decreases and isn't subject to adjustments.
+
+`currentTime = performance.timeOrigin + performance.now();`
+
+
 ## fetch png/jpg
 so how to get the imageData in Node like browser
 
