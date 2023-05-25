@@ -71,6 +71,15 @@ android 挖洞/三明治，本质多层
 2. plugin receive => webview extension surfacetexture 绘制上屏
 ```
 
+## 小程序测试
+
+采用 shoots 服务
+https://github.com/Tencent/QTAF
+https://appium.io/docs/en/2.0/
+https://github.com/AirtestProject/Airtest
+
+Accessibility
+
 
 
 ## 其他参考
