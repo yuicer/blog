@@ -4,7 +4,7 @@ date: 2023/05/15 20:03:11
 tag: 砖头
 ---
 
-## https
+## http
 hyper text transform protocal
 
 no state
@@ -62,7 +62,21 @@ cookie
 2. Secure 只允许 https
 3. SameSite
 
+http 1.1 
+keep-alive 长连接
+管道化，客户端根据类型发多个
 
+http 2.0
+二进制传输
+多路复用，一个 tcp 多个请求，乱序发送，再组装
+头部压缩 map 表
+服务端推送
+
+http 3.0
+谷歌基于 udp 的 quic 协议
+减少握手时间，基于 tls 1.3
+解决 2.0 一个 stream 丢包到后后 stream 堵塞
+更好的移动端表现
 
 预检请求（options）
 

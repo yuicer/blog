@@ -6,6 +6,11 @@ img: /img/20230109-1.jpg
 ---
 
 
+## gc
+
+refer => traversal all the node to find not referred (but can not solve loop refer)
+mark-clear => find from the root, reachable node will be stay(sort optional), others will be clear
+
 ## find port
 ```
 netstat -anp | grep 3009
@@ -86,10 +91,12 @@ width: 500,
 
 
 ## cario vs skia
-Cairo c语言实现，优点包括可移植性，支持多种设备平台；它可以创建栅格和向量图像，具有良好的可扩展性，以及可扩展的输出格式。与Skia相比，Cairo对文本和图形渲染的支持也更为丰富。
-Cairo的主要缺点是其性能不如Skia，这使得它适合绘制较复杂的图形而不是动画或游戏。另外，Cairo的API功能也不如Skia那样广泛，并且不能很好地支持Android开发。
+
+Cairo c 语言实现，优点包括可移植性，支持多种设备平台；它可以创建栅格和向量图像，具有良好的可扩展性，以及可扩展的输出格式。与 Skia 相比，Cairo 对文本和图形渲染的支持也更为丰富。
+Cairo 的主要缺点是其性能不如 Skia，这使得它适合绘制较复杂的图形而不是动画或游戏。另外，Cairo 的 API 功能也不如 Skia 那样广泛，并且不能很好地支持 Android 开发。
 
 skia c++
+
 ## node-canvas install problems
 
 https://github.com/Automattic/node-canvas/wiki/Installation:-Windows
