@@ -7,11 +7,12 @@
   },
   "scripts": {
     "start": "vuepress dev docs",
+    "write": "vuepress new docs",
     "build": "vuepress build docs --dest ./dist"
   },
   "dependencies": {
-    "@yuicer/vuepress-theme-yuicer": "2.3.10",
-    "vuepress": "1.5.3"
+    "@yuicer/vuepress-theme-yuicer": "3.0.0",
+    "vuepress": "1.9.9"
   },
   "repository": {
     "type": "git",
