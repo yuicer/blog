@@ -35,7 +35,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: dist
+          build_dir: ./dist
           # domain: blog.yuicer.com
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
