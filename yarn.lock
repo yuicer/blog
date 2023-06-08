@@ -1762,10 +1762,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@yuicer/vuepress-theme-yuicer@3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-3.0.0.tgz#172a693ea1afe3c9499ab4d8a73c0350f5191b8c"
-  integrity sha512-RWBok0J9S1KPg4F8HX3peO0wWyqq/PVGduFYQIqvYgBKy8+c6s3+cGT6L16OxteuvSL2OsaGee1JkfDMd/Coow==
+"@yuicer/vuepress-theme-yuicer@3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@yuicer/vuepress-theme-yuicer/-/vuepress-theme-yuicer-3.0.1.tgz#279f3210f47e266a066cb8757ae50c9a0046eab7"
+  integrity sha512-WvwlkeD2+ck4HClnrRqquqCCJz0qCaLAIuvkGn3bm8C2gUdLG96TjdXGdTUqIR92+PL6angnHMWClMTsNlnqAg==
   dependencies:
     "@vuepress/plugin-back-to-top" "1.9.9"
     "@vuepress/plugin-blog" "1.9.4"

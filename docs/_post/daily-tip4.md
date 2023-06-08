@@ -5,19 +5,20 @@ tag: 砖头
 img: /img/20230109-1.jpg
 ---
 
-
 ## gc
 
 refer => traversal all the node to find not referred (but can not solve loop refer)
 mark-clear => find from the root, reachable node will be stay(sort optional), others will be clear
 
 ## find port
+
 ```
 netstat -anp | grep 3009
 kill -9 2347946
 ```
 
 ## github auth failed
+
 ```
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @ WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED! @
@@ -33,7 +34,8 @@ Host key for github.com has changed and you have requested strict checking.
 Host key verification failed.
 ```
 
-just run 
+just run
+
 ```
 ssh-keygen -R github.com
 ```
@@ -46,11 +48,12 @@ Also, Date.now() may have been impacted by system and user clock adjustments, cl
 
 `currentTime = performance.timeOrigin + performance.now();`
 
-
 ## fetch png/jpg
+
 so how to get the imageData in Node like browser
 
 node
+
 ```
 import { PNG } from 'pngjs';
 const data = await fetch(imgUrl, {
@@ -65,6 +68,7 @@ console.log('imgData:', imgData);
 ```
 
 browser
+
 ```
 const domImg = document.getElement('#img')
 const canvas = document.getElement('#canvas')
@@ -84,11 +88,11 @@ width: 500,
 ```
 
 ## absorb page color
+
 1. html to canvas
    1. get all dom in view, and use dsl (basic dom-css to canvas api) to transfer to canvas, and toImageData to get color
 2. window.[eyedropper](https://developer.mozilla.org/en-US/docs/Web/API/EyeDropper)
 3. get specific dom computed style
-
 
 ## cario vs skia
 

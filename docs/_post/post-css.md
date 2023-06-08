@@ -5,7 +5,6 @@ date: 2018/07/13 14:05:30
 ---
 
 <p></p>
-<!-- more -->
 
 ## postCss
 
@@ -56,22 +55,22 @@ module.exports = {
         exclude: /node_modules/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'style-loader',
           },
           {
             loader: 'css-loader',
             options: {
-              importLoaders: 1
-            }
+              importLoaders: 1,
+            },
           },
           {
-            loader: 'postcss-loader'
-          }
-        ]
-      }
-    ]
-  }
-}
+            loader: 'postcss-loader',
+          },
+        ],
+      },
+    ],
+  },
+};
 ```
 
 然后去设置 postCss 的配置，这里设置有很多种方法，具体可以看[这篇](https://github.com/michael-ciniawsky/postcss-load-config)
@@ -84,9 +83,9 @@ module.exports = {
     'postcss-import': {},
     'postcss-url': {},
     // to edit target browsers: use "browserslist" field in package.json
-    autoprefixer: {}
-  }
-}
+    autoprefixer: {},
+  },
+};
 ```
 
 以及在 package.json 中的 Browserslist

@@ -13,7 +13,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  gh-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

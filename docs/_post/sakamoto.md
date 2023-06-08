@@ -5,7 +5,6 @@ tag: 油彩
 ---
 
  <iframe src="/sakamoto/index.html" frameborder="no" marginwidth="0" marginheight="0" height="150" scrolling="no"></iframe>
-<!-- more -->
 
 偶然发现觉得挺好玩的，一个利用 css 的 `box-shadow` 属性来制作的像素动画
 

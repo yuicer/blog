@@ -5,8 +5,6 @@ tag: 砖头
 img: 'https://ci4.googleusercontent.com/proxy/2iVfJzLufYkF8GSrcgXRD6Vn-qfA_GQFyBpi4uO0qsGuod31oy0UYYuP5Ws0PUbW787xFQT-FEDywZ8BhSDhMcaMWedQCQUESgYDmaeN-Ak4la2Y8RFLIo2L9Dm1vAQVJnC-UXjeNQUUKs1V8FPWYkFMeSKB0RGiuHY=s0-d-e1-ft#https://gallery.mailchimp.com/9d7ced8c4bbd6c2f238673f0f/images/564593a4-e918-4d30-b030-2c27f578a90d.png'
 ---
 
-<!-- more -->
-
 ## intro
 
 Today we will see the new features of the github **[GitHub Package Registry](https://github.com/features/package-registry?utm_source=announcement&utm_medium=email&utm_campaign=ww-gpr-beta) !**
