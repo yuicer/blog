@@ -12,7 +12,7 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -36,7 +36,8 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@2
+        
+        uses: actions/deploy-pages@v2
         with:
           artifact_name: "dist"
     
