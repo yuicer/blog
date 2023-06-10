@@ -18,8 +18,8 @@ module.exports = {
   evergreen: true,
   base: '/',
   themeConfig: {
-    bgImg: 'https://img.yuicer.com/bg/winter.jpg',
-    logo: 'https://img.yuicer.com/me.config/me.png',
+    bgImg: 'https://cdn.jsdelivr.net/gh/yuicer/images/bg/winter.jpg',
+    logo: 'https://cdn.jsdelivr.net/gh/yuicer/images/me.config/me.png',
     links: [
       {
         text: 'github',

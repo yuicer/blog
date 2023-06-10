@@ -2,7 +2,6 @@
 title: Daily tip 04
 date: 2023/01/09 17:53:01
 tag: 砖头
-img: /img/20230109-1.jpg
 ---
 
 ## gc
