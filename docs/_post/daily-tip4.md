@@ -4,6 +4,23 @@ date: 2023/01/09 17:53:01
 tag: 砖头
 ---
 
+## promise status
+```
+function promiseState(p) {
+  const t = {};
+  return Promise.race([p, t])
+    .then(v => (v === t)? "pending" : "fulfilled", () => "rejected");
+}
+
+var a = Promise.resolve();
+var b = Promise.reject();
+var c = new Promise(() => {});
+
+promiseState(a).then(state => console.log(state)); // fulfilled
+promiseState(b).then(state => console.log(state)); // rejected
+promiseState(c).then(state => console.log(state)); // pending
+```
+
 ## gc
 
 refer => traversal all the node to find not referred (but can not solve loop refer)
