@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="./vega.js"></script>
+    <title>凸包</title>
+  </head>
+  <body>
+    <div id="view"></div>
+  </body>
+  <script>
+    const pointData = [
+      { x: 1, y: 28 },
+      { x: 2, y: 1 },
+      { x: 4, y: 1 },
+      { x: 5, y: 11 },
+      { x: 6, y: 21 },
+      { x: 7, y: 43 },
+      { x: 10, y: 115 }
+    ]
+
+    // 叉乘
+    function crossProduct(p0, p1, p2) {
+      const vectorA = {
+        x: p1.x - p0.x,
+        y: p1.y - p0.y
+      }
+      const vectorB = {
+        x: p2.x - p0.x,
+        y: p2.y - p0.y
+      }
+      // 向量叉乘，这里简化了 z 轴
+      return vectorA.x * vectorB.y - vectorA.y * vectorB.x
+    }
+
+    function getConvexHull(pointData) {
+      const result = []
+      const arr = pointData.sort((a, b) => a.y - b.y)
+      const p0 = arr.shift()
+
+      // 最低点一定在凸包上，有多个最低点可以随便选一个
+      result.push(p0)
+
+      // 按角度排序
+      const sortedPoint = arr
+        .map(p => {
+          const cos = (p.x - p0.x) / Math.sqrt(Math.pow(p.y - p0.y, 2) + Math.pow(p.x - p0.x, 2))
+          return {
+            ...p,
+            cos
+          }
+        })
+        .sort((a, b) => b.cos - a.cos)
+        .map(p => {
+          return { x: p.x, y: p.y }
+        })
+
+      // 按照凸包的性质，第一个点必定在凸包上
+      result.push(sortedPoint.shift())
+
+      sortedPoint.forEach((p, index) => {
+        while (crossProduct(result[result.length - 2], result[result.length - 1], p) < 0) {
+          // 在右方，说明栈顶不是凸包上的点
+          result.pop()
+        }
+        // 在一条线上的情况，多去一个点，属于优化操作
+        if (crossProduct(result[result.length - 2], result[result.length - 1], p) === 0)
+          result.pop()
+
+        // 在左边及线上
+        result.push(p)
+      })
+
+      return result
+    }
+
+    const areaData = getConvexHull(JSON.parse(JSON.stringify(pointData)))
+
+    function render(spec) {
+      view = new vega.View(vega.parse(spec), {
+        renderer: 'canvas', // renderer (canvas or svg)
+        container: '#view' // parent DOM container
+      })
+      return view.runAsync()
+    }
+
+    console.log('areaData', areaData)
+    console.log('pointData', pointData)
+
+    render({
+      width: 400,
+      height: 300,
+      padding: 5,
+      data: [
+        {
+          name: 'point',
+          values: pointData
+        },
+        {
+          name: 'area',
+          values: areaData
+        }
+      ],
+      scales: [
+        {
+          name: 'xscale',
+          type: 'linear',
+          range: 'width',
+          zero: false,
+          domain: { data: 'point', field: 'x' }
+        },
+        {
+          name: 'yscale',
+          type: 'linear',
+          range: 'height',
+          nice: true,
+          zero: true,
+          domain: { data: 'point', field: 'y' }
+        }
+      ],
+      axes: [
+        { orient: 'bottom', scale: 'xscale', offset: 20 },
+        { orient: 'left', scale: 'yscale', offset: 20 }
+      ],
+      marks: [
+        {
+          type: 'line',
+          from: { data: 'area' },
+          encode: {
+            enter: {
+              x: { scale: 'xscale', field: 'x' },
+              y: { scale: 'yscale', field: 'y' },
+              fill: { value: 'steelblue' },
+              fillOpacity: { value: 0.5 }
+            }
+          }
+        },
+        {
+          type: 'symbol',
+          from: { data: 'point' },
+          encode: {
+            enter: {
+              x: { scale: 'xscale', field: 'x' },
+              y: { scale: 'yscale', field: 'y' },
+              stroke: { value: 'steelblue' },
+              fill: { value: 'steelblue' },
+              size: { value: 40 },
+              strokeWidth: { value: 3 }
+            }
+          }
+        },
+        {
+          type: 'text',
+          from: { data: 'point' },
+          encode: {
+            enter: {
+              x: { scale: 'xscale', field: 'x' },
+              y: { scale: 'yscale', field: 'y' },
+              color: { value: 'black' },
+              dx: { value: 6 },
+              dy: { value: -10 },
+              fontSize: { value: 14 },
+              text: { signal: "'(' + datum.x + ',' + datum.y + ')'" }
+            }
+          }
+        }
+      ]
+    })
+  </script>
+</html>
