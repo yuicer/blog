@@ -4,6 +4,9 @@ date: 2023/01/09 17:53:01
 tag: 砖头
 ---
 
+## Visual Viewport
+this api may be can be used to detect input(sougou) hegiht when focusd on input element at mobile page development scene
+
 ## promise status
 ```
 function promiseState(p) {
