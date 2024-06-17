@@ -57,3 +57,27 @@ DocumentFragment
 
 promise.any 任意一个成功或者都失败
 promise.race 任意一个成功或者失败
+
+defer 在 domcontentloaded 之后，但是不阻碍 dom 渲染，彼此之间有序
+async 完全异步
+在实际开发中，defer 用于需要整个 DOM 的脚本，和/或脚本的相对执行顺序很重要的时候。
+async 用于独立脚本，例如计数器或广告，这些脚本的相对执行顺序无关紧要。
+
+DoS（拒绝服务攻击，Denial of Service）是一种网络攻击手段，它通过给服务器发送大量请求来阻止对资源的合法使用。
+
+跨站脚本攻击（Cross-site scripting，XSS）是一种安全漏洞，攻击者可以利用这种漏洞在网站上注入恶意的客户端代码。若受害者运行这些恶意代码，攻击者就可以突破网站的访问限制并冒充受害者
+
+CSRF（Cross-site request forgery）跨站请求伪造：攻击者诱导受害者进入第三方网站，在第三方网站中，向被攻击网站发送跨站请求
+
+中间人攻击（Man-in-the-middle attack，MitM）会在消息发出方和接收方之间拦截双方通讯
+
+git merge --squash Abranch
+
+object.is()
+== 做隐式转换
+=== 对数字处理上不同，NaN, +0 -0
+
+http 缓存
+expire
+cache-control
+304 协商缓存
