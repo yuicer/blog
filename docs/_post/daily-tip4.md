@@ -14,6 +14,28 @@ use personal access token as password
 
 refer: https://stackoverflow.com/questions/68775869/message-support-for-password-authentication-was-removed
 
+## Visual Viewport
+
+this api may be can be used to detect input(sougou) hegiht when focusd on input element at mobile page development scene
+
+## promise status
+
+```
+function promiseState(p) {
+  const t = {};
+  return Promise.race([p, t])
+    .then(v => (v === t)? "pending" : "fulfilled", () => "rejected");
+}
+
+var a = Promise.resolve();
+var b = Promise.reject();
+var c = new Promise(() => {});
+
+promiseState(a).then(state => console.log(state)); // fulfilled
+promiseState(b).then(state => console.log(state)); // rejected
+promiseState(c).then(state => console.log(state)); // pending
+```
+
 ## gc
 
 refer => traversal all the node to find not referred (but can not solve loop refer)
