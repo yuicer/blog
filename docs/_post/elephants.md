@@ -13,7 +13,7 @@
 <iframe src="/demo/demo_210516/index.html" frameborder="no" marginwidth="0" marginheight="0" width="100%" height="250"></iframe>
 
 ## 前言
-这是一个从准备写到实际开始写拖了一年多的文章。起源是最开始去食堂吃饭，要从地下车库走，然后地下车库的墙上就画着一副大象图。第一次看到的时候就想起了不知道从哪里听到的一句谚语。用四个参数就可以画出一个大象。回去查了一下还真的有一篇论文是关于这个的，下面简单意译了一下论文内容
+这是一个从准备写到实际开始写拖了一年多的文章。起源是最开始去食堂吃饭，要从地下车库走，然后地下车库的墙上就画着一副大象图。第一次看到的时候就想起了不知道从哪里听到的一句谚语。用四个参数就可以画出一个大象。后面闲暇时候回去查了一下，确实是有一篇关于这个的论文。
 
 [Drawing an elephant with four complex parameters](https://fermatslibrary.com/s/drawing-an-elephant-with-four-complex-parameters)
 
@@ -59,128 +59,139 @@
 
 ## 代码验证
 
-```js
-var canvas = document.getElementById('canvas'),
-  ctx = canvas.getContext('2d');
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p></p>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+      var canvas = document.getElementById("canvas"),
+        ctx = canvas.getContext("2d");
 
-var elephant = [];
-var π = Math.PI;
-var τ = 2 * Math.PI;
-var P = 256;
-var theta = 0;
-var width = 600;
-var height = 600;
-var scale = 4;
+      var elephant = [];
+      var π = Math.PI;
+      var τ = 2 * Math.PI;
+      var P = 360;
+      var theta = 0;
+      var width = 200;
+      var height = 200;
+      var scale = 1;
 
-FourierCoeffcient = function (real, imag) {
-  this.real = real;
-  this.imag = imag;
-};
+      FourierCoefficient = function (real, imag) {
+        this.real = real;
+        this.imag = imag;
+      };
 
-//  p1 = 50 - 30j
-//  p2 = 18 +  8j
-//  p3 = 12 - 10j
-//  p4 = -14 - 60j
-//  p5 = 40 + 20j
+      //  p1 = 50 - 30j
+      //  p2 = 18 +  8j
+      //  p3 = 12 - 10j
+      //  p4 = -14 - 60j
+      //  p5 = 40 + 20j
 
-// x(t): [  0. +0.j , -60.-30.j , 0. +8.j , -0.-10.j , 0. +0.j  ,   0. +0.j]
-// y(t): [  0. +0.j ,   0.+50.j , 0.+18.j , 12. +0.j , 0. +0.j  , -14. +0.j]
-var P0 = new FourierCoeffcient(0, 0);
-var P1 = new FourierCoeffcient(50, -30);
-var P2 = new FourierCoeffcient(18, 8);
-var P3 = new FourierCoeffcient(12, -10);
-var P4 = new FourierCoeffcient(-14, -60);
-var P5 = new FourierCoeffcient(40, 20);
+      // x(t): [   0.+50.j , 0.+18.j , 12. +0.j , 0. +0.j  , -14. +0.j]
+      // y(t): [ -60.-30.j , 0. +8.j , -0.-10.j , 0. +0.j  ,   0. +0.j]
+      var P1 = new FourierCoefficient(50, -30);
+      var P2 = new FourierCoefficient(18, 8);
+      var P3 = new FourierCoefficient(12, -10);
+      var P4 = new FourierCoefficient(-14, -60);
+      var P5 = new FourierCoefficient(40, 20);
 
-Point = function (x, y) {
-  this.x = x;
-  this.y = y;
-  this.radius = 3;
-};
+      Point = function (x, y) {
+        this.x = x;
+        this.y = y;
+        this.radius = 3;
+      };
 
-function makeElephant() {
-  var x, y;
+      function makeElephant() {
+        var x, y;
 
-  for (var i = 0; i < P; i++) {
-    x =
-      // sin
-      0 * Math.sin(0 * τ * (i / P)) +
-      P1.imag * Math.sin(1 * τ * (i / P)) +
-      P2.imag * Math.sin(2 * τ * (i / P)) +
-      P3.imag * Math.sin(3 * τ * (i / P)) +
-      0 * Math.sin(4 * τ * (i / P)) +
-      0 * Math.sin(5 * τ * (i / P)) +
-      // cos
-      0 * Math.cos(0 * τ * (i / P)) +
-      P4.imag * Math.cos(1 * τ * (i / P)) +
-      0 * Math.cos(2 * τ * (i / P)) +
-      0 * Math.cos(3 * τ * (i / P)) +
-      0 * Math.cos(4 * τ * (i / P)) +
-      0 * Math.cos(5 * τ * (i / P));
+        for (var i = 0; i < P; i++) {
+          var t = τ * (i / P);
+          x =
+            // cos
+            P4.imag * Math.cos(1 * t) +
+            0 * Math.cos(2 * t) +
+            0 * Math.cos(3 * t) +
+            0 * Math.cos(4 * t) +
+            // sin
+            P1.imag * Math.sin(1 * t) +
+            P2.imag * Math.sin(2 * t) +
+            P3.imag * Math.sin(3 * t) +
+            0 * Math.sin(4 * t);
 
-    y =
-      // sin
-      0 * Math.sin(0 * τ * (i / P)) +
-      P1.real * Math.sin(1 * τ * (i / P)) +
-      P2.real * Math.sin(2 * τ * (i / P)) +
-      0 * Math.sin(3 * τ * (i / P)) +
-      0 * Math.sin(4 * τ * (i / P)) +
-      0 * Math.sin(5 * τ * (i / P)) +
-      // cos
-      0 * Math.cos(0 * τ * (i / P)) +
-      0 * Math.cos(1 * τ * (i / P)) +
-      0 * Math.cos(2 * τ * (i / P)) +
-      P3.real * Math.cos(3 * τ * (i / P)) +
-      0 * Math.cos(4 * τ * (i / P)) +
-      P4.real * Math.cos(5 * τ * (i / P));
+          y =
+            // cos
+            0 * Math.cos(1 * t) +
+            0 * Math.cos(2 * t) +
+            P3.real * Math.cos(3 * t) +
+            0 * Math.cos(4 * t) +
+            P4.real * Math.cos(5 * t) +
+            // sin
+            P1.real * Math.sin(1 * t) +
+            P2.real * Math.sin(2 * t) +
+            0 * Math.sin(3 * t) +
+            0 * Math.sin(4 * t);
 
-    elephant.push(new Point(x, y));
-  }
+          elephant.push(new Point(x, y));
+        }
+      }
 
-  // eye
-  elephant.push(new Point(P5.imag, -P5.imag));
-}
+      function draw() {
+        ctx.translate(width / 2, height / 2);
+        ctx.scale(scale, scale);
+        ctx.strokeStyle = "steelblue";
 
-function draw() {
-  ctx.translate(width / 2, height / 2);
-  ctx.scale(3, 3);
-  ctx.strokeStyle = 'steelblue';
+        let delta = (Math.cos(τ * theta) - 0.5) / 10;
 
-  let delta = (Math.cos(τ * theta) - 0.5) / 10;
+        // eye
+        ctx.arc(P5.imag, -P5.imag, 4, 0, τ);
+        ctx.fill();
+        elephant.forEach((p, index) => {
+          ctx.beginPath();
+          let _p = Object.assign({}, p);
 
-  elephant.forEach((p, index) => {
-    ctx.beginPath();
-    let _p = Object.assign({}, p);
+          // 这里根据 delta 做一个动画
+          if (_p.x > P5.real) {
+            _p.y += (_p.x - P5.real) * delta;
+          }
 
-    // 这里根据 delta 做一个动画
-    if (_p.x > P5.real) {
-      _p.y += (_p.x - P5.real) * delta;
-    }
+          // body
+          ctx.arc(_p.x, _p.y, _p.radius, 0, τ);
 
-    // body
-    ctx.arc(_p.x, _p.y, _p.radius, 0, τ);
+          ctx.stroke();
+        });
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+      }
 
-    // eye
-    if (index === elephant.length - 1) {
-      ctx.fillStyle = 'black';
-      ctx.fill();
-    }
+      makeElephant();
 
-    ctx.stroke();
-  });
-  ctx.setTransform(1, 0, 0, 1, 0, 0);
-}
+      function loop() {
+        ctx.clearRect(0, 0, width, height);
+        theta += 0.1;
+        draw();
+        setTimeout(() => {
+          loop();
+        }, 200);
+      }
 
-makeElephant();
+      loop();
+    </script>
+  </body>
+</html>
 
-function loop() {
-  ctx.clearRect(0, 0, width, height);
-  theta += 0.1;
-  draw();
-  setTimeout(() => {
-    loop();
-  }, 100);
-}
-
-loop();
 ```
+
+## 参考
+
+https://www.youtube.com/watch?v=r6sGWTCMz2k
+
+https://www.jezzamon.com/fourier/zh-cn.html
+
+https://alexmiller.phd/posts/fourier-series-spinning-circles-visualization/
