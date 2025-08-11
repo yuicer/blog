@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Websocket | yuicer</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="https://img.yuicer.com/me.config/me.png">
+    <meta name="description" content="colorful wanted">
+    
+    <link rel="preload" href="/assets/css/0.styles.9d116826.css" as="style"><link rel="preload" href="/assets/js/app.0958dc5d.js" as="script"><link rel="preload" href="/assets/js/4.5b843dec.js" as="script"><link rel="preload" href="/assets/js/5.4f7e8107.js" as="script"><link rel="preload" href="/assets/js/38.214de49f.js" as="script"><link rel="prefetch" href="/assets/js/1.84fdeac6.js"><link rel="prefetch" href="/assets/js/10.f47326a2.js"><link rel="prefetch" href="/assets/js/11.015673ec.js"><link rel="prefetch" href="/assets/js/12.35cf854d.js"><link rel="prefetch" href="/assets/js/13.0cb0bd13.js"><link rel="prefetch" href="/assets/js/14.2a2cd11b.js"><link rel="prefetch" href="/assets/js/15.3932639a.js"><link rel="prefetch" href="/assets/js/16.a950256a.js"><link rel="prefetch" href="/assets/js/17.f38da1f2.js"><link rel="prefetch" href="/assets/js/18.82e81f40.js"><link rel="prefetch" href="/assets/js/19.467d18e1.js"><link rel="prefetch" href="/assets/js/20.ea1eeb89.js"><link rel="prefetch" href="/assets/js/21.dce4b66a.js"><link rel="prefetch" href="/assets/js/22.a4cb4010.js"><link rel="prefetch" href="/assets/js/23.4e23238e.js"><link rel="prefetch" href="/assets/js/24.ca52664f.js"><link rel="prefetch" href="/assets/js/25.cd0186b7.js"><link rel="prefetch" href="/assets/js/26.8631edec.js"><link rel="prefetch" href="/assets/js/27.d00edefa.js"><link rel="prefetch" href="/assets/js/28.ebb5853f.js"><link rel="prefetch" href="/assets/js/29.27a4411f.js"><link rel="prefetch" href="/assets/js/30.65f837b1.js"><link rel="prefetch" href="/assets/js/31.4201373b.js"><link rel="prefetch" href="/assets/js/32.e2683603.js"><link rel="prefetch" href="/assets/js/33.d951fe77.js"><link rel="prefetch" href="/assets/js/34.d3f94057.js"><link rel="prefetch" href="/assets/js/35.1ddffe8a.js"><link rel="prefetch" href="/assets/js/36.52bddbdc.js"><link rel="prefetch" href="/assets/js/37.22db3779.js"><link rel="prefetch" href="/assets/js/39.a83709cc.js"><link rel="prefetch" href="/assets/js/6.ef9b23be.js"><link rel="prefetch" href="/assets/js/7.4eede40e.js"><link rel="prefetch" href="/assets/js/8.b9542584.js"><link rel="prefetch" href="/assets/js/9.15f840d6.js"><link rel="prefetch" href="/assets/js/vuejs-paginate.5f196bb7.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9d116826.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" style="background-image:url(https://img.yuicer.com//bg/winter.jpg),linear-gradient(#ccc 0%,#ccc 100%);background-attachment:fixed;background-position-x:50%;background-position-y:0%;background-blend-mode:multiply;background-repeat:no-repeat;background-size:cover;" data-v-7024d1ce data-v-ec218eb8><header class="navbar" data-v-7024d1ce><div class="sidebar"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true" class="icon"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg> <div class="pan"><div class="link-item"><a href="https://github.com/yuicer" target="_blank">github</a></div><div class="link-item"><a href="https://space.bilibili.com/3069623" target="_blank">B 站</a></div></div></div> <a href="/" class="home-link router-link-active"><div alt="yuicer" class="logo" style="background-image:url(https://img.yuicer.com/me.config/me.png);"></div> <span class="site-name can-hide">yuicer</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div></div></header> <div class="wrapper" data-v-7024d1ce><main class="page" data-v-7024d1ce data-v-ec218eb8> <div class="page-title" data-v-7024d1ce data-v-ec218eb8>Websocket</div> <div class="tags" data-v-7024d1ce data-v-ec218eb8><div data-v-7024d1ce data-v-ec218eb8><span data-v-7024d1ce data-v-ec218eb8>砖头</span></div> <div class="time" data-v-7024d1ce data-v-ec218eb8><span data-v-7024d1ce data-v-ec218eb8>Jan 8  2019</span></div></div> <!----> <div class="theme-yuicer-content content__default" data-v-ec218eb8><p>好久没有写积累的东西了，都是零零点点的。今天花点时间整理一下关于 websocket 的东西</p> <h3 id="websocket-是什么"><a href="#websocket-是什么" class="header-anchor">#</a> websocket 是什么</h3> <p>webscoket 实际上是一种传输协议，它可以实现前后端的全双工协议传输。即可以实现传统的前端向后端传输，也可以由服务端主动的向前端发送。它和 http 协议没有特别多的交集，只有在建立连接的时候会使用 http 去升级协议。</p> <h3 id="websocket-和其他的方案对比"><a href="#websocket-和其他的方案对比" class="header-anchor">#</a> websocket 和其他的方案对比</h3> <h4 id="轮询"><a href="#轮询" class="header-anchor">#</a> 轮询</h4> <p>轮训就是最原始的实现方案了。。。</p> <h4 id="长轮询"><a href="#长轮询" class="header-anchor">#</a> 长轮询</h4> <p>请求发出后，会被服务端 hold 住，此时一直处于 pending 状态，直到有数据返回或者超时再开启下一次。</p> <h4 id="server-send-events"><a href="#server-send-events" class="header-anchor">#</a> server send events</h4> <p>只可服务端发送消息。客户端利用 eventsource api，和 websocket 类似，主动监听消息</p> <h3 id="websocket-请求协议"><a href="#websocket-请求协议" class="header-anchor">#</a> websocket 请求协议</h3> <ul><li><a href="https://socket-io-chat.now.sh/" target="_blank" rel="noopener noreferrer">以 socket.io 为例子<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，chrome 环境</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>general:
+  Request URL: wss://socket-io-chat.now.sh/socket.io/?EIO=3&amp;transport=websocket&amp;sid=DrOBxwSloVfVqwNzAFZF
+  Request Method: GET
+  Status Code: 101 Switching Protocols
+
+Response Headers
+  cache-control: s-maxage=0
+  CF-RAY: 495d0c3c9c6a9bb7-SJC
+  Connection: upgrade
+  Date: Tue, 08 Jan 2019 07:45:59 GMT
+  Expect-CT: max-age=604800, report-uri=&quot;https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct&quot;
+  now: 1
+  Sec-WebSocket-Accept: ihMiSxjFOglAVillOgmKTw1gDeQ=
+  Sec-WebSocket-Extensions: permessage-deflate; client_no_context_takeover
+  Sec-WebSocket-Version: 13
+  Server: cloudflare
+  Upgrade: websocket
+  WebSocket-Server: uWebSockets
+  x-now-trace: sfo1
+
+Request Headers:
+  Accept-Encoding: gzip, deflate, br
+  Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
+  Cache-Control: no-cache
+  Connection: Upgrade
+  Host: socket-io-chat.now.sh
+  Origin: https://socket-io-chat.now.sh
+  Pragma: no-cache
+  Sec-WebSocket-Extensions: permessage-deflate; client_max_window_bits
+  Sec-WebSocket-Key: L9i2lXAHNH6vxZ12RRwcAw==
+  Sec-WebSocket-Version: 13
+  Upgrade: websocket
+  User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3663.0 Safari/537.36
+
+Query String Parameters
+  EIO: 3
+  transport: websocket
+  sid: DrOBxwSloVfVqwNzAFZF
+  ?EIO=3&amp;transport=polling&amp;t=MWiRCui&amp;sid=DrOBxwSloVfVqwNzAFZF	?EIO=3&amp;transport=websocket&amp;sid=DrOBxwSloVfVqwNzAFZF
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br></div></div><p>注意请求头的 connection 和 upgrade 字段，请求成功后服务端会返回 101 Switching Protocols 来切换协议</p> <p>。之后的传输都是使用类似与 tcp 的包来直接进行帧传输。可以为二进制 buffer array 或者文本 text/plain 类型</p> <ul><li>以下数据为 chrome 解析出来的 Messages 数据展示</li></ul> <div class="language- line-numbers-mode"><pre class="language-text"><code>  2probe	6	16:46:46.089
+  3probe	6	16:46:46.361
+  5	1	16:46:46.458
+  42[&quot;add user&quot;,&quot;yuicer&quot;]	23	16:46:47.424
+  42[&quot;login&quot;,{&quot;numUsers&quot;:18}]	27	16:46:47.626
+  42[&quot;new message&quot;,{&quot;username&quot;:&quot;robot&quot;,&quot;message&quot;:&quot;Welcome yuicer&quot;}]	65	16:46:47.927
+  42[&quot;typing&quot;]	12	16:46:50.795
+  42[&quot;new message&quot;,&quot;hah&quot;]	23	16:46:51.344
+  42[&quot;stop typing&quot;]	17	16:46:51.345
+  42[&quot;user joined&quot;,{&quot;username&quot;:&quot;test&quot;,&quot;numUsers&quot;:19}]	51	16:46:57.851
+  42[&quot;new message&quot;,{&quot;username&quot;:&quot;robot&quot;,&quot;message&quot;:&quot;Welcome test&quot;}]	63	16:46:58.060
+  42[&quot;typing&quot;,{&quot;username&quot;:&quot;test&quot;}]	32	16:47:00.984
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p>上面是基于 <a href="https://github.com/socketio/engine.io-protocol/blob/master/README.md#packet" target="_blank" rel="noopener noreferrer">engine.io<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>的格式遍写的内容
+初始的帧格式如下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>  0                   1                   2                   3
+  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+  +-+-+-+-+-------+-+-------------+-------------------------------+
+  |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
+  |I|S|S|S|  (4)  |A|     (7)     |             (16/64)           |
+  |N|V|V|V|       |S|             |   (if payload len==126/127)   |
+  | |1|2|3|       |K|             |                               |
+  +-+-+-+-+-------+-+-------------+ - - - - - - - - - - - - - - - +
+  |     Extended payload length continued, if payload len == 127  |
+  + - - - - - - - - - - - - - - - +-------------------------------+
+  |                               |Masking-key, if MASK set to 1  |
+  +-------------------------------+-------------------------------+
+  | Masking-key (continued)       |          Payload Data         |
+  +-------------------------------- - - - - - - - - - - - - - - - +
+  :                     Payload Data continued ...                :
+  +---------------------------------------------------------------+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h3 id="大规模群消息优化"><a href="#大规模群消息优化" class="header-anchor">#</a> 大规模群消息优化</h3> <ul><li>只对在线人群进行广播</li> <li>消息的收发和消息的处理没有强关联
+<ul><li>假设有 a ，b 用户，s 服务端，a 发送的消息，经过 ws 收发， a 会立即收到反馈并显示在 a 的 ui 上，然后此消息会经过服务端逻辑处理，如果消息确认无效或没有发送成功，会再发送给 a 一条消息，去标明发送的消息欧问题，此时 a 的 ui 上的这条消息会出现带红色感叹号的提示。同时 b 不会收到该消息。如果该消息为红包类型消息，a 也会立即收到，b 则会在服务端处理相应的逻辑之后才会收到该消息。</li> <li>总结为，对于发送者和接受者是不同的逻辑，发送方要求实时展示，接收方要求准确无误。</li></ul></li> <li>如果消息频繁，可将实时发送更改为非实时的间隔段打包发送，即对于在 100ms 内的消息进行打包，然后 100 ms 发送一次。</li></ul> <h3 id="socket-io"><a href="#socket-io" class="header-anchor">#</a> socket.io</h3> <p><a href="http://socket.io/" target="_blank" rel="noopener noreferrer">官网地址<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></p> <ul><li>参考连接
+<a href="https://www.jianshu.com/p/a3e06ec1a3a0" target="_blank" rel="noopener noreferrer">https://www.jianshu.com/p/a3e06ec1a3a0<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div> <div class="page-nav" data-v-7024d1ce data-v-ec218eb8><p class="inner" data-v-7024d1ce data-v-ec218eb8><span class="prev" data-v-7024d1ce data-v-ec218eb8><a href="/animation/" class="prev" data-v-ec218eb8><span data-v-ec218eb8>←</span>
+            Animation
+          </a></span> <span class="next" data-v-7024d1ce data-v-ec218eb8><a href="/post-css/" class="next" data-v-ec218eb8>
+            PostCss
+            <span data-v-ec218eb8>→</span></a></span></p></div> <!----> </main></div></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.0958dc5d.js" defer></script><script src="/assets/js/4.5b843dec.js" defer></script><script src="/assets/js/5.4f7e8107.js" defer></script><script src="/assets/js/38.214de49f.js" defer></script>
+  </body>
+</html>

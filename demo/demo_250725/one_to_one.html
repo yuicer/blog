@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+  </body>
+
+  <style>
+    canvas {
+      border: 1px solid red;
+      left: 0px;
+      top: 0px;
+      position: relative;
+    }
+  </style>
+  <script src="./util.js"></script>
+  <script>
+    function loop(data1, data2, data3) {
+      const time = Date.now();
+      if (time >= startTime + duration) {
+        return;
+      }
+
+      const t = (time - startTime) / duration;
+      if (t < 0.5) {
+        const t0 = (time - startTime) / (duration / 2);
+        drawBezierArr(
+          data1.map((x, index) => {
+            return data1[index] * (1 - t0) + data2[index] * t0;
+          })
+        );
+      } else {
+        const t1 = (time - startTime - duration / 2) / (duration / 2);
+        drawBezierArr(
+          data2.map((x, index) => {
+            return data2[index] * (1 - t1) + data3[index] * t1;
+          })
+        );
+      }
+
+      requestAnimationFrame(() => loop(data1, data2, data3));
+    }
+
+    /** @type {CanvasRenderingContext2D} */
+    const ctx = document.querySelector('#canvas').getContext('2d');
+
+    const duration = 6000;
+
+    const rectData = getBezierCurvesFromRect(
+      { x: 100, y: 100 },
+      { x: 300, y: 100 },
+      { x: 300, y: 300 },
+      { x: 100, y: 300 }
+    );
+    const circleData = getBezierCurvesFromCircle(200, 200, 100);
+    const triangleData = getBezierCurvesFromTriangle(
+      { x: 200, y: 80 },
+      { x: 300, y: 200 },
+      { x: 100, y: 200 }
+    );
+    const twoCurve = splitCurve(
+      { x: triangleData[0], y: triangleData[1] },
+      { x: triangleData[2], y: triangleData[3] },
+      { x: triangleData[4], y: triangleData[5] },
+      { x: triangleData[6], y: triangleData[7] },
+      1 / 2
+    );
+    const newCurve = [...twoCurve.left, ...twoCurve.right.slice(2)];
+
+    const alignedTriangleData = [...newCurve, ...triangleData.slice(8)];
+
+    const startTime = Date.now();
+    loop(rectData, alignedTriangleData, circleData);
+  </script>
+</html>
