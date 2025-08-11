@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+  </body>
+
+  <style>
+    canvas {
+      border: 1px solid red;
+      left: 0px;
+      top: 0px;
+      position: relative;
+    }
+  </style>
+  <script src="./util.js"></script>
+  <script>
+    function interpolateColor(rgba1, rgba2, t) {
+      function parseRGBA(rgba) {
+        const match = rgba.match(
+          /rgba?\(([\d.]+), ?([\d.]+), ?([\d.]+)(?:, ?([\d.]+))?\)/
+        );
+        if (!match) throw new Error('Invalid RGBA format: ' + rgba);
+        return {
+          r: parseFloat(match[1]),
+          g: parseFloat(match[2]),
+          b: parseFloat(match[3]),
+          a: match[4] !== undefined ? parseFloat(match[4]) : 1,
+        };
+      }
+
+      const c1 = parseRGBA(rgba1);
+      const c2 = parseRGBA(rgba2);
+
+      const r = Math.round(c1.r + (c2.r - c1.r) * t);
+      const g = Math.round(c1.g + (c2.g - c1.g) * t);
+      const b = Math.round(c1.b + (c2.b - c1.b) * t);
+      const a = (c1.a + (c2.a - c1.a) * t).toFixed(3);
+
+      return `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+    function draw(arr, color) {
+      ctx.beginPath();
+
+      let x0 = arr[0];
+      let y0 = arr[1];
+      ctx.moveTo(x0, y0);
+
+      for (let i = 2; i < arr.length; i += 6) {
+        const x1 = arr[i];
+        const y1 = arr[i + 1];
+        const x2 = arr[i + 2];
+        const y2 = arr[i + 3];
+        const x3 = arr[i + 4];
+        const y3 = arr[i + 5];
+
+        if (x0 === x1 && y0 === y1 && x2 === x3 && y2 === y3) {
+          ctx.lineTo(x3, y3);
+        } else {
+          ctx.bezierCurveTo(x1, y1, x2, y2, x3, y3);
+        }
+
+        x0 = x3;
+        y0 = y3;
+      }
+
+      ctx.closePath();
+      ctx.fillStyle = color;
+
+      ctx.fill();
+    }
+    function loop(groupData1, groupData2) {
+      const time = Date.now();
+      if (time >= startTime + duration) {
+        return;
+      }
+      ctx.clearRect(0, 0, 500, 500);
+      const t = (time - startTime) / duration;
+      const color = interpolateColor(color1, color2, t);
+
+      groupData1.forEach((data1, groupIndex) => {
+        const data2 = groupData2[groupIndex];
+        draw(
+          data2.map((x, index) => {
+            return data1[index] * (1 - t) + data2[index] * t;
+          }),
+          color
+        );
+      });
+
+      requestAnimationFrame(() => loop(groupData1, groupData2));
+    }
+
+    function splitRect(p0, p1, p2, p3, row, col) {
+      const arr = [];
+      const width = (p1.x - p0.x) / col;
+      const height = (p2.y - p1.y) / row;
+      for (let i = 0; i < row; i++) {
+        for (let j = 0; j < col; j++) {
+          const point = { x: p0.x + width * i, y: p0.y + height * j };
+          arr.push({
+            p0: point,
+            p1: { x: point.x + width, y: point.y },
+            p2: { x: point.x + width, y: point.y + height },
+            p3: { x: point.x, y: point.y + height },
+          });
+        }
+      }
+      return arr;
+    }
+
+    /** @type {CanvasRenderingContext2D} */
+    const ctx = document.querySelector('#canvas').getContext('2d');
+
+    const splitCount = 30;
+    const col = 10;
+    const row = 10;
+    const duration = 6000;
+    const r = 3;
+    const color1 = 'rgba(146, 14, 252, 0.8)';
+    const color2 = 'rgba(54, 281, 94, 1)';
+
+    const rectGroup = splitRect(
+      { x: 50, y: 50 },
+      { x: 200, y: 50 },
+      { x: 200, y: 200 },
+      { x: 50, y: 200 },
+      row,
+      col
+    );
+    const rectGroupData = rectGroup.map(({ p0, p1, p2, p3 }) => {
+      return getBezierCurvesFromRect(p0, p1, p2, p3);
+    });
+    const circleGroup = new Array(col * row).fill().map((x) => {
+      return {
+        cx: 100 + Math.random() * 300,
+        cy: 100 + Math.random() * 300,
+        r,
+      };
+    });
+    const circleGroupData = circleGroup.map(({ cx, cy, r }) => {
+      return getBezierCurvesFromCircle(cx, cy, r);
+    });
+
+    const startTime = Date.now();
+    loop(rectGroupData, circleGroupData);
+  </script>
+</html>

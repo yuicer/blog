@@ -9,66 +9,90 @@ mid: 4909229
 
 又活一岁
 
+<iframe src="/demo/demo_250725/one_to_multi.html" frameborder="no" marginwidth="0" marginheight="0" width="500" height="500"></iframe>
+
+<iframe src="/demo/demo_250725/one_to_one.html" frameborder="no" marginwidth="0" marginheight="0" width="500" height="500"></iframe>
 
 ## [贝塞尔曲线](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)
-我们通常用线条来绘制2D图形，大致分为两种线条：直线和曲线。不论我们动手还是用计算机，都能很容易地画出第一种线条。只要给计算机起点和终点，直线就画出来了。
+
+我们通常用线条来绘制 2D 图形，大致分为两种线条：直线和曲线。不论我们动手还是用计算机，都能很容易地画出第一种线条。只要给计算机起点和终点，直线就画出来了。
 然而，绘制曲线却是个大问题。我们必须准确的描述一个曲线给到计算机，否则我们用笔很容易画出来的弯钩，弧线，很难在电脑上来复现。
 
 计算机画线是需要一个函数来进行定义，直线是很好定义的 p(t) = p0 + (1-t)(p1 - p0)，但是对于弧线来说有非常多种的函数定义。这里就要介绍到今天的主角，贝塞尔曲线了
 
-贝塞尔曲线于1962年，由法国工程师皮埃尔·贝兹（Pierre Bézier）所广泛发表，他运用贝塞尔曲线来为汽车的主体进行设计，由于它的一些特殊性质，使得在计算机中广泛应用这种曲线来进行定义弧线
+贝塞尔曲线于 1962 年，由法国工程师皮埃尔·贝兹（Pierre Bézier）所广泛发表，他运用贝塞尔曲线来为汽车的主体进行设计，由于它的一些特殊性质，使得在计算机中广泛应用这种曲线来进行定义弧线
 
 ### 一次（线性）贝塞尔曲线
-给定点P0、P1，线性贝塞尔曲线只是一条两点之间的直线。这条线由下式给出：
+
+给定点 P0、P1，线性贝塞尔曲线只是一条两点之间的直线。这条线由下式给出：
+
 <img src="/img/20250725-f-1.png" style="max-width: 400px;">
 
 且其等同于[线性插值](https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%80%A7%E6%8F%92%E5%80%BC)。
-<img src="/img/20250725-2.gif" style="max-width: 400px;">
+
+<img src="/img/20250725-2.gif" style="max-width: 800px;">
 
 ### 二次方贝塞尔曲线
-二次方贝塞尔曲线的路径由给定点P0、P1、P2的函数B（t）追踪：
+
+二次方贝塞尔曲线的路径由给定点 P0、P1、P2 的函数 B（t）：
+
 <img src="/img/20250725-f-2.png" style="max-width: 400px;">
 
-<img src="/img/20250725-3.gif" style="max-width: 400px;">
+示意图
+
+<img src="/img/20250725-3.gif" style="max-width: 800px;">
 
 ### 三次方贝塞尔曲线
-P0、P1、P2、P3四个点在平面或在三维空间中定义了三次方贝塞尔曲线。曲线起始于P0走向P1，并从P2的方向来到P3。一般不会经过P1或P2；这两个点只是在那里提供方向信息。P0和P1之间的间距，决定了曲线在转而趋进P2之前，走向P1方向的“长度有多长”。
-曲线的参数形式为：
-<img src="/img/20250725-f-3.png" style="max-width: 400px;">
 
-<img src="/img/20250725-4.gif" style="max-width: 400px;">
+P0、P1、P2、P3 四个点在平面或在三维空间中定义了三次方贝塞尔曲线。曲线起始于 P0 走向 P1，并从 P2 的方向来到 P3。一般不会经过 P1 或 P2；这两个点只是在那里提供方向信息。P0 和 P1 之间的间距，决定了曲线在转而趋进 P2 之前，走向 P1 方向的“长度有多长”。
+曲线的参数形式为：
+
+<img src="/img/20250725-f-3.png" style="max-width: 800px;">
+
+示意图
+
+<img src="/img/20250725-4.gif" style="max-width: 800px;">
 
 ### n 次方贝塞尔曲线
-n阶贝塞尔曲线可如下推断。给定点P0、P1、…、Pn，其贝塞尔曲线即
-<img src="/img/20250725-f-n.png" style="max-width: 400px;">
+
+n 阶贝塞尔曲线可如下推断。给定点 P0、P1、…、Pn，其贝塞尔曲线即
+
+<img src="/img/20250725-f-n.png" style="max-width: 800px;">
 
 例如 n=5
-<img src="/img/20250725-f-5.png" style="max-width: 400px;">
-<img src="/img/20250725-f-().png" style="max-width: 400px;">
 
-<img src="/img/20250725-f-n-1.png" style="max-width: 400px;">
+<img src="/img/20250725-f-5.png" style="max-width: 800px;">
+<p></p>
+<img src="/img/20250725-f-().png" style="max-width: 400px;">
+<p></p>
+<img src="/img/20250725-f-n-1.png" style="max-width: 800px;">
+
 用平常话来说，n 阶的贝塞尔曲线，即双 n−1 阶贝塞尔曲线之间的插值。
 
-
 ## 贝塞尔的升阶和降阶
+
 ### 图像证明
 
 我们还是从三次开始，从图片分析，可以看出来如下规律
-B 由线性（R0，R1），
-R0 由线性（Q0，Q1），R1 由线性（Q1，Q2）
-Q0 由线性（P0，P1），Q1 由线性（P1，P2）,Q2 由线性（P2，P3）
----
-来迭代一下上述的公式
-B 由线性（R0，R1），
-R0 由二次（ P0，P1，P2），R1 由二次（P1，P2，P3）
----
-最后再迭代一次
-B 由三次（P0，P1，P2，P3）
 
-<img src="/img/20250725-img.png" style="max-width: 400px;">
+- B 由线性（R0，R1），
+- R0 由线性（Q0，Q1），R1 由线性（Q1，Q2）
+- Q0 由线性（P0，P1），Q1 由线性（P1，P2）,Q2 由线性（P2，P3）
+
+来迭代一下上述的公式
+
+- B 由线性（R0，R1），
+- R0 由二次（ P0，P1，P2），R1 由二次（P1，P2，P3）
+
+最后再迭代一次
+
+- B 由三次（P0，P1，P2，P3）
+
+<img src="/img/20250725-img.png" style="max-width: 600px;">
 
 ### 数学证明
-<img src="/img/20250725-math.png" style="max-width: 400px;">
+
+<img src="/img/20250725-math.png" style="max-width: 600px;">
 
 展开合并到最后，可以得到我们的证明结果
 我们可以发现贝塞尔曲线是可以很方便的升阶和降阶的
@@ -76,13 +100,14 @@ B 由三次（P0，P1，P2，P3）
 这个性质，让三次贝塞尔成了最广泛的应用，二次无法表达 S 曲线，四次及更高的需要更多的控制点，复杂度明显变高
 
 ## 贝塞尔的可拆分性
+
 [De Casteljau 算法](https://zh.wikipedia.org/wiki/%E5%BE%B7%E5%8D%A1%E6%96%AF%E7%89%B9%E9%87%8C%E5%A5%A5%E7%AE%97%E6%B3%95)
 
-```
+```js
 function lerp(p0, p1, t) {
   return {
     x: (1 - t) * p0.x + t * p1.x,
-    y: (1 - t) * p0.y + t * p1.y
+    y: (1 - t) * p0.y + t * p1.y,
   };
 }
 
@@ -98,11 +123,10 @@ function deCasteljauSplit(p0, p1, p2, p3, t) {
 
   return {
     left: [p0, p01, p012, p0123],
-    right: [p0123, p123, p23, p3]
+    right: [p0123, p123, p23, p3],
   };
 }
 ```
-
 
 通过这个算法我们可以看出来，新构造的两端 B(p0, p01, p012, p0123) 和 B(p0123, p123, p023, p3) 和原来的 B(p0,p1,p2,p3)，
 在分割点处是连续的（连接）
@@ -110,19 +134,20 @@ function deCasteljauSplit(p0, p1, p2, p3, t) {
 在分割点二阶导数是一致的（曲度）
 数学证明在这里省略
 
+<img src="/img/20250725-hand.png" style="max-width: 800px;">
 
-<img src="/img/20250725-hand.png" style="max-width: 400px;">
 有了这个性质后，贝塞尔曲线就非常方便的可以进行拆分，转换，存储
 
 ## 图形转换
 
-<img src="/img/20250725-a.png" style="max-width: 400px;">
+<img src="/img/20250725-a.png" style="max-width: 800px;">
 
 ### 圆形转换
 
-<img src="/img/20250725-b.png" style="max-width: 400px;">
-```
- // from top, clockwise rotate
+<img src="/img/20250725-b.png" style="max-width: 600px;">
+
+```js
+// from top, clockwise rotate
 function getBezierCurvesFromCircle(cx, cy, r) {
   const k = 0.5522847498;
   const offset = k * r;
@@ -161,14 +186,14 @@ function getBezierCurvesFromCircle(cx, cy, r) {
     cy - r,
   ];
 }
-
 ```
 
 ### 矩形转换
 
-<img src="/img/20250725-c.png" style="max-width: 400px;">
-```
- // from left top, clockwise rotate
+<img src="/img/20250725-c.png" style="max-width: 600px;">
+
+```js
+// from left top, clockwise rotate
 function getBezierCurvesFromRect(p0, p1, p2, p3) {
   const offset = 1 / 4;
   const width = p1.x - p0.x;
@@ -208,13 +233,13 @@ function getBezierCurvesFromRect(p0, p1, p2, p3) {
     p0.y,
   ];
 }
-
 ```
 
 ### 三角转换
 
-<img src="/img/20250725-d.png" style="max-width: 400px;">
-```
+<img src="/img/20250725-d.png" style="max-width: 600px;">
+
+```js
 // from top, clockwise rotate
 function getBezierCurvesFromTriangle(p0, p1, p2) {
   const offset = 1 / 4;
@@ -248,19 +273,22 @@ function getBezierCurvesFromTriangle(p0, p1, p2) {
     p0.y,
   ];
 }
-
 ```
 
 ### 对齐控制点
+
 对齐有很多种方式，我们拿三角形要对齐矩形来，可以观察到这里是差一条边的，那么我们要对齐的话就大概下面几种方式
 
 #### 3 +1
-多复制一段重复的 
+
+多复制一段重复的
 
 #### 2 + 0.5 + 0.5
+
 将某一段拆分为一半
 
-#### 3 * 4
+#### 3 \* 4
+
 求最小公约数，然后三角形没条边分为 4 段，矩形每条边分为 3 段
 
 <img src="/img/20250725-f.png" style="max-width: 400px;">
@@ -270,91 +298,103 @@ function getBezierCurvesFromTriangle(p0, p1, p2) {
 ```
 
 function lerp(p0, p1, t) {
-  return {
-    x: (1 - t) * p0.x + t * p1.x,
-    y: (1 - t) * p0.y + t * p1.y,
-  };
+return {
+x: (1 - t) _ p0.x + t _ p1.x,
+y: (1 - t) _ p0.y + t _ p1.y,
+};
 }
 // deCasteljauSplit
 function splitCurve(p0, p1, p2, p3, t) {
-  const p01 = lerp(p0, p1, t);
-  const p12 = lerp(p1, p2, t);
-  const p23 = lerp(p2, p3, t);
+const p01 = lerp(p0, p1, t);
+const p12 = lerp(p1, p2, t);
+const p23 = lerp(p2, p3, t);
 
-  const p012 = lerp(p01, p12, t);
-  const p123 = lerp(p12, p23, t);
+const p012 = lerp(p01, p12, t);
+const p123 = lerp(p12, p23, t);
 
-  const p0123 = lerp(p012, p123, t);
+const p0123 = lerp(p012, p123, t);
 
-  // return two curve
-  return {
-    left: [
-      // curve1
-      p0.x,
-      p0.y,
-      p01.x,
-      p01.y,
-      p012.x,
-      p012.y,
-      p0123.x,
-      p0123.y,
-    ],
-    right: [
-      // curve2
-      p0123.x,
-      p0123.y,
-      p123.x,
-      p123.y,
-      p23.x,
-      p23.y,
-      p3.x,
-      p3.y,
-    ],
-  };
+// return two curve
+return {
+left: [
+// curve1
+p0.x,
+p0.y,
+p01.x,
+p01.y,
+p012.x,
+p012.y,
+p0123.x,
+p0123.y,
+],
+right: [
+// curve2
+p0123.x,
+p0123.y,
+p123.x,
+p123.y,
+p23.x,
+p23.y,
+p3.x,
+p3.y,
+],
+};
 }
 
 ```
 
 ## 插值动画
+
 插值动画其实比较简单，我们只需要对初始和目标的贝塞尔曲线的数据进行一一对应来插值就好
-```
+
+```js
 drawBezierArr(
-    data1.map((x, index) => {
-      return data2[index] * (1 - t) + data1[index] * t;
-    })
-  );
+data1.map((x, index) => {
+return data2[index] _ (1 - t) + data1[index] _ t;
+})
+);
 ```
 
 ## 一对多/多对一 动画
+
 它的本质其实还是一对一的延伸，我们需要在最开始，将一转为多，这样就可以实现这个酷炫的效果
-```
- const rectGroup = splitRect(
-      { x: 50, y: 50 },
-      { x: 200, y: 50 },
-      { x: 200, y: 200 },
-      { x: 50, y: 200 },
-      row,
-      col
-    );
+
+```js
+
+const rectGroup = splitRect(
+{ x: 50, y: 50 },
+{ x: 200, y: 50 },
+{ x: 200, y: 200 },
+{ x: 50, y: 200 },
+row,
+col
+);
 const rectGroupData = rectGroup.map(({ p0, p1, p2, p3 }) => {
-  return getBezierCurvesFromRect(p0, p1, p2, p3);
+return getBezierCurvesFromRect(p0, p1, p2, p3);
 });
-const circleGroup = new Array(col * row).fill().map((x) => {
-  return {
-    cx: 100 + Math.random() * 300,
-    cy: 100 + Math.random() * 300,
-    r,
-  };
+const circleGroup = new Array(col _ row).fill().map((x) => {
+return {
+cx: 100 + Math.random() _ 300,
+cy: 100 + Math.random() \* 300,
+r,
+};
 });
 const circleGroupData = circleGroup.map(({ cx, cy, r }) => {
-  return getBezierCurvesFromCircle(cx, cy, r);
+return getBezierCurvesFromCircle(cx, cy, r);
 });
+
 ```
 
 <img src="/img/20250725-arcnights.gif" style="max-width: 300px;">
 
 ## Reference
-https://pomax.github.io/bezierinfo/zh-CN/index.html
-https://zh.wikipedia.org/wiki/%E5%BE%B7%E5%8D%A1%E6%96%AF%E7%89%B9%E9%87%8C%E5%A5%A5%E7%AE%97%E6%B3%95
-https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A
 
+[bezierinfo](https://pomax.github.io/bezierinfo/zh-CN/index.html)
+
+[wiki](https://zh.wikipedia.org/wiki/%E5%BE%B7%E5%8D%A1%E6%96%AF%E7%89%B9%E9%87%8C%E5%A5%A5%E7%AE%97%E6%B3%95)
+
+[wiki](https://zh.wikipedia.org/wiki/%E8%B2%9D%E8%8C%B2%E6%9B%B2%E7%B7%9A)
+
+```
+
+```
